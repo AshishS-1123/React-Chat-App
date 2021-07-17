@@ -43,7 +43,7 @@ function InputForm ({messages, setMessages}) {
 			    type='submit' 
 			  	onClick={onFormSubmit}
 			  >
-			  	    Send
+			  	    send
 			  </Button>
 		  </FormControl>
 		</form>
