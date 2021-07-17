@@ -1,0 +1,29 @@
+#InputForm__form {
+  width: 40vw;
+
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#InputForm__label {
+	width: 70vw;
+	order: 1;
+}
+#InputForm__input {
+	width: 70vw;
+	order: 1;
+}
+
+
+#InputForm__button {
+	width: 9vw;
+	
+	position: absolute;
+	right: 0px;
+}

@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import "./App.css";
 
-import InputForm from "./components/inputForm";
-import MessageList from "./components/messageList";
+import InputForm from "./components/InputForm";
+import MessageList from "./components/MessageList";
 
 function App() {
   // state to store all sent and recieved messages

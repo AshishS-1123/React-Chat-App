@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
 
+import "./InputForm.css"
+
 function InputForm ({messages, setMessages}) {
 	const [text, setText] = useState("");
 
@@ -18,10 +20,11 @@ function InputForm ({messages, setMessages}) {
 	}
 
 	return (
-		<form>
+		<form id='InputForm__form'>
 		  <FormControl>
 			  <InputLabel
-			  	htmlFor="my-input"
+			  	id='InputForm__label'
+			  	htmlFor="InputForm__input"
 			  >
 			  		Enter Your Message
 			  </InputLabel>
@@ -34,6 +37,7 @@ function InputForm ({messages, setMessages}) {
 			  />
 
 			  <Button 
+			  	id='InputForm__button'
 			  	variant='outlined' 
 			  	color='primary'
 			    type='submit' 
