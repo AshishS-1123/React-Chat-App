@@ -1,0 +1,9 @@
+.ChatContainer__div {
+	width: 50vw;
+	min-height: 100vh;
+
+	float: left;
+	box-sizing: border-box;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}

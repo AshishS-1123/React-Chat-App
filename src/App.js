@@ -1,19 +1,18 @@
 import { useState } from "react";
+import ChatList from "./components/ChatList"
+import ChatContainer from "./components/ChatContainer"
+import ChatInfo from "./components/ChatInfo"
 
 import "./App.css";
 
-import InputForm from "./components/InputForm";
-import MessageList from "./components/MessageList";
-
 function App() {
-  // state to store all sent and recieved messages
-  const [messages, setMessages] = useState([]);
   return (
-    <div className="App">
-      <MessageList className='message-container' messages={messages}></MessageList>
-      <InputForm className='form' messages = {messages} setMessages = {setMessages}/>
+    <div className='App__div'>
+      <ChatList></ChatList>
+      <ChatContainer></ChatContainer>
+      <ChatInfo></ChatInfo>
     </div>
-  );
+  )
 }
 
 export default App;
