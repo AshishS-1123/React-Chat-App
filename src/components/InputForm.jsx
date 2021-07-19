@@ -11,7 +11,7 @@ function InputForm ({messages, setMessages}) {
 		console.log(text);
 
 		let new_message = {id: messages.length+1, type: "sent", text: text}
-		setMessages([...messages, new_message]);
+		setMessages([new_message, ...messages]);
 		setText('');
 	}
 
@@ -21,7 +21,7 @@ function InputForm ({messages, setMessages}) {
 
 	return (
 		<form id='InputForm__form'>
-		  <FormControl>
+		  <FormControl id='InputForm__formcontrol'>
 			  <InputLabel
 			  	id='InputForm__label'
 			  	htmlFor="InputForm__input"
