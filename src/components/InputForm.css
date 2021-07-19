@@ -1,29 +1,24 @@
 #InputForm__form {
-  width: 40vw;
-
-  position: absolute;
-  bottom: 1%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-#InputForm__label {
 	width: 70vw;
-	order: 1;
+	height: 10vh;
+
+	position: fixed;
+	bottom: 0px; left: 50%;
+	transform: translateX(-50%);
 }
 
-#InputForm__input {
-	width: 70vw;
-	order: 1;
+#InputForm__formcontrol {
+	position: fixed;
+	bottom: 0px; left: 50%;
+	transform: translateX(-50%);
+
+	height: 10vh;
+	width: 50vw;
+	max-width: 700px;
+	background: rgba(255,255,255,1);
 }
 
-#InputForm__button {
-	width: 9vw;
-	
-	position: absolute;
-	right: 0px;
+#InputForm__label, #InputForm__input {
+	width: 50vw;
+	max-width: 700px;
 }
