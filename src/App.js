@@ -10,10 +10,12 @@ function App() {
   const [messages, setMessages] = useState([]);
   return (
     <div className="App">
-      <InputForm messages = {messages} setMessages = {setMessages}/>
-      <MessageList messages = {messages} />
+      <MessageList className='message-container' messages={messages}></MessageList>
+      <InputForm className='form' messages = {messages} setMessages = {setMessages}/>
     </div>
   );
 }
 
 export default App;
+
+// <MessageList className='message-container' messages={messages}></MessageList>
