@@ -14,5 +14,3 @@ function App() {
 }
 
 export default App;
-
-// <MessageList className='message-container' messages={messages}></MessageList>
