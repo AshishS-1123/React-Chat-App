@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import Home from "./components/layout/Home"
@@ -22,7 +21,7 @@ function App() {
         <Route path='/signin'>
           <SignIn></SignIn>
         </Route>
-        <Route path='/chats'>
+        <Route exact path='/chats'>
           <div className='App__div'>
             <ChatList></ChatList>
             <ChatContainer></ChatContainer>
