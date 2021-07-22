@@ -29,18 +29,19 @@ function InputForm ({messages, setMessages}) {
 			  		Enter Your Message
 			  </InputLabel>
 
-			  <Input 
+			  <Input
 			    id="InputForm__input"
 			    aria-describedby="input-for-message"
 			  	value={text}
 			    onChange={onInputChange}
 			  />
 
-			  <Button 
+			  <Button
 			  	id='InputForm__button'
-			  	variant='outlined' 
+			  	variant='outlined'
 			  	color='primary'
-			    type='submit' 
+			    type='submit'
+					disabled={!text}
 			  	onClick={onFormSubmit}
 			  >
 			  	    send
