@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import Home from "./components/layout/Home"
@@ -9,6 +10,8 @@ import ChatContainer from "./components/ChatContainer"
 import "./App.css";
 
 function App() {
+  const [activeChat, setActiveChat] = useState(1)
+
   return (
     <Router>
       <Switch>
@@ -23,8 +26,8 @@ function App() {
         </Route>
         <Route exact path='/chats'>
           <div className='App__div'>
-            <ChatList></ChatList>
-            <ChatContainer></ChatContainer>
+            <ChatList setActiveChat={setActiveChat}></ChatList>
+            <ChatContainer activeChat={activeChat} setActiveChat={setActiveChat}></ChatContainer>
           </div>
         </Route>
       </Switch>

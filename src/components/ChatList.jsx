@@ -5,11 +5,17 @@ import chat_list_items from "../data/chat-list-contacts"
 import "./ChatList.css"
 
 function ChatList(props) {
+	const onChatClick = (e) => {
+		props.setActiveChat(e.target.id[4])
+	}
 	return (
 		<div className='ChatList__div'>
 			{chat_list_items.map((item) => {
 				return (
-						<Card key={item.id} className="ChatList__card">
+						<Card key={item.id}
+									id={"rec_"+item.id}
+									className="ChatList__card"
+									onClick={onChatClick}>
 							{item.recipient_name}
 						</Card>
 				)
