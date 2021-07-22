@@ -1,8 +1,8 @@
 import React from "react"
 import { useState } from "react"
 
-import InputForm from "./InputForm";
-import MessageList from "./MessageList";
+import InputForm from "./chats/InputForm";
+import MessageList from "./chats/MessageList";
 
 import "./ChatContainer.css"
 
