@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Home from "./components/layout/Home"
 import SignIn from "./components/auth/SignIn"
 import SignUp from "./components/auth/SignUp"
-import ChatList from "./components/ChatList"
-import ChatContainer from "./components/ChatContainer"
+import ChatList from "./components/layout/ChatList"
+import ChatContainer from "./components/layout/ChatContainer"
 
 import "./App.css";
 

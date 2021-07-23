@@ -1,7 +1,7 @@
 import React from "react"
 import { Card } from "@material-ui/core"
 
-import chat_list_items from "../data/chat-list-contacts"
+import chat_list_items from "../../data/chat-list-contacts"
 import "./ChatList.css"
 
 function ChatList(props) {
