@@ -6,9 +6,9 @@
 }
 
 .ChatList__card {
-	height: 5vh;
+	height: 7vh;
 	width: 100%;
-	
-	box-sizing: border-box;
-	padding: 1em;
+
+  display: flex;
+  align-items: center;
 }
