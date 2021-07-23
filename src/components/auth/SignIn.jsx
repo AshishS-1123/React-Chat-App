@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
 
+import "./Auth.css"
+
 function SignIn(props) {
   const [info, setInfo] = useState({email: "", password: ""})
   const {userInfo, setUserInfo} = props
@@ -16,28 +18,30 @@ function SignIn(props) {
   }
 
   return(
-    <Card>
-      <FormControl id='SignIn__formcontrol'>
+    <Card className="Auth__card">
+      <FormControl className='Auth__formcontrol'>
 			  <InputLabel
-			  	id='SignIn__label'
+			  	className='Auth__label'
 			  	htmlFor="email">
 			  		Email
 			  </InputLabel>
 			  <Input
 			    id="email"
+          className="Auth__input"
 			    aria-describedby="input-for-email"
 			    onChange={onInputChange}
 			  />
       </FormControl>
 
-      <FormControl>
+      <FormControl className='Auth__formcontrol'>
         <InputLabel
-			  	id='SignIn__label'
+			  	className='Auth__label'
 			  	htmlFor="password">
 			  		Password
 			  </InputLabel>
 			  <Input
 			    id="password"
+          className="Auth__input"
           type="password"
 			    aria-describedby="input-for-password"
 			    onChange={onInputChange}
@@ -45,7 +49,7 @@ function SignIn(props) {
 		  </FormControl>
 
 		  <Button
-		  	id='SignIn__button'
+		  	className='Auth__button'
 		  	variant='outlined'
 		  	color='primary'
 		    type='submit'

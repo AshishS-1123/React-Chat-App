@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
 
+import "./Auth.css"
+
 function SignUp(props) {
   const [info, setInfo] = useState({email: "", password: "", name: ""})
   const {userInfo, setUserInfo} = props
@@ -16,43 +18,46 @@ function SignUp(props) {
   }
 
   return(
-    <Card>
+    <Card className="Auth__card">
 
-      <FormControl id='SignUp__formcontrol'>
+      <FormControl className='Auth__formcontrol'>
 			  <InputLabel
-			  	id='SignUp__label'
+			  	className='Auth__label'
 			  	htmlFor="email">
 			  		Email
 			  </InputLabel>
 			  <Input
 			    id="email"
+          className="Auth__input"
 			    aria-describedby="input-for-email"
 			    onChange={onInputChange}
 			  />
       </FormControl>
 
-      <FormControl>
+      <FormControl className="Auth__formcontrol">
         <InputLabel
-			  	id='SignUp__label'
+			  	className='Auth__label'
 			  	htmlFor="name">
 			  		Name
 			  </InputLabel>
 			  <Input
 			    id="name"
+          className="Auth__input"
           type="text"
 			    aria-describedby="input-for-name"
 			    onChange={onInputChange}
 			  />
 		  </FormControl>
 
-      <FormControl>
+      <FormControl className="Auth__formcontrol">
           <InputLabel
-  			  	id='SignUp__label'
+  			  	className='Auth__label'
   			  	htmlFor="password">
   			  		Password
   			  </InputLabel>
   			  <Input
   			    id="password"
+            className="Auth__input"
             type="passwordp"
   			    aria-describedby="input-for-password"
   			    onChange={onInputChange}
@@ -60,13 +65,13 @@ function SignUp(props) {
   		  </FormControl>
 
 		  <Button
-		  	id='SignUp__button'
+		  	className='Auth__button'
 		  	variant='outlined'
 		  	color='primary'
 		    type='submit'
 		  	onClick={onFormSubmit}>
 		  	    <Link to="/chats">
-              Sign U
+              Sign Up
             </Link>
 		  </Button>
 
