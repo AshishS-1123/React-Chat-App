@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
+import { Link } from "react-router-dom"
 
-function SignUp() {
+function SignUp(props) {
   const [info, setInfo] = useState({email: "", password: "", name: ""})
+  const {userInfo, setUserInfo} = props
 
   const onInputChange = (e) => {
     setInfo({...info, [e.target.id]: e.target.value})
@@ -10,7 +12,7 @@ function SignUp() {
 
   const onFormSubmit = (e) => {
     e.preventDefault()
-    console.log(info)
+    setUserInfo(info)
   }
 
   return(
@@ -51,19 +53,21 @@ function SignUp() {
   			  </InputLabel>
   			  <Input
   			    id="password"
-            type="password"
+            type="passwordp"
   			    aria-describedby="input-for-password"
   			    onChange={onInputChange}
   			  />
   		  </FormControl>
 
 		  <Button
-		  	id='SignIn__button'
+		  	id='SignUp__button'
 		  	variant='outlined'
 		  	color='primary'
 		    type='submit'
 		  	onClick={onFormSubmit}>
-		  	    send
+		  	    <Link to="/chats">
+              Sign U
+            </Link>
 		  </Button>
 
     </Card>
