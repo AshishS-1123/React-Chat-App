@@ -29,7 +29,11 @@ function App() {
         </Route>
         <Route exact path='/chats'>
           <div className='App__div'>
-            <ChatList setActiveChat={setActiveChat}></ChatList>
+            <ChatList
+                activeChat={activeChat}
+                setActiveChat={setActiveChat}
+                userName={userInfo.name}>
+            </ChatList>
             <ChatContainer activeChat={activeChat} setActiveChat={setActiveChat}></ChatContainer>
           </div>
         </Route>
