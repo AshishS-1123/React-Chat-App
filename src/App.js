@@ -2,15 +2,18 @@ import { useState } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import Home from "./components/layout/Home"
-import SignIn from "./components/layout/SignIn"
-import SignUp from "./components/layout/SignUp"
+import SignIn from "./components/auth/SignIn"
+import SignUp from "./components/auth/SignUp"
 import ChatList from "./components/ChatList"
 import ChatContainer from "./components/ChatContainer"
 
 import "./App.css";
 
 function App() {
+  // this the recipient that the user is currently chatting with
   const [activeChat, setActiveChat] = useState(1)
+  // this is the information of the user that we got they logged in
+  const [userInfo, setUserInfo] = useState({name:"", email:"", password:""})
 
   return (
     <Router>
@@ -19,10 +22,10 @@ function App() {
           <Home />
         </Route>
         <Route path='/signup'>
-          <SignUp></SignUp>
+          <SignUp setUserInfo={setUserInfo}></SignUp>
         </Route>
         <Route path='/signin'>
-          <SignIn></SignIn>
+          <SignIn setUserInfo={setUserInfo}></SignIn>
         </Route>
         <Route exact path='/chats'>
           <div className='App__div'>
