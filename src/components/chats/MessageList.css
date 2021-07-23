@@ -1,6 +1,10 @@
 #MessageList__container {
 	margin-bottom: 10vh;
+	padding-top: 2vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
 	width: 50vw;
+	min-height: 100vh;
 
 	display: flex;
 	flex-direction: column;
@@ -10,15 +14,18 @@
 }
 
 .MessageList__card {
-	height: 2vh;
-	width: 40vw;
+	height: 6vh;
 
-	margin: 1vw;
-	padding: 1em;
+	margin: 0.2vw;
+	padding: 1em 1.2em;
 
 	align-self: flex-start;
+	border-radius: 30px !important;
+	border-top-left-radius: 0px !important;
 }
 
 .MessageList__card_sent {
 	align-self: flex-end;
+	border-top-left-radius: 30px !important;
+	border-top-right-radius: 0px !important;
 }

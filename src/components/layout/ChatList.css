@@ -12,3 +12,11 @@
   display: flex;
   align-items: center;
 }
+
+.ChatList__card:hover {
+	background: rgba(238, 110, 115, 0.6);
+}
+
+.active {
+	background: rgb(238, 110, 115) !important;
+}
