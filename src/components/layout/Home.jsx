@@ -1,13 +1,16 @@
 import React from "react"
-import { Button } from "@material-ui/core"
+import { Button, Card } from "@material-ui/core"
 import { Link } from "react-router-dom"
+
+import "./Home.css"
 
 function Home() {
 
   return(
-    <React.Fragment>
+    <Card className="Home__card">
       <Link to='/signin'>
         <Button
+            className="Home__button"
             variant='outlined'
             color='primary'>
               Sign In
@@ -15,13 +18,14 @@ function Home() {
       </Link>
       <Link to='/signup'>
         <Button
+            className="Home__button"
             variant='outlined'
             color='primary'>
               Sign Up
         </Button>
       </Link>
 
-    </React.Fragment>)
+    </Card>)
 }
 
 export default Home
