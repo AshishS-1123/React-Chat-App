@@ -26,3 +26,8 @@
 
   height: 5vh;
 }
+
+input[type="text"]:not(.browser-default) {
+	box-shadow: none !important;
+  border-bottom: none !important;
+}
