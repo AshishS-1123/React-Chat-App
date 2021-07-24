@@ -58,7 +58,7 @@ function SignUp(props) {
   			  <Input
   			    id="password"
             className="Auth__input"
-            type="passwordp"
+            type="password"
   			    aria-describedby="input-for-password"
   			    onChange={onInputChange}
   			  />
