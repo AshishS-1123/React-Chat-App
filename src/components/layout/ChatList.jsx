@@ -1,5 +1,6 @@
 import React from "react"
 import { Card } from "@material-ui/core"
+import { connect } from "react-redux"
 
 import UserProfile from "./UserProfile"
 
@@ -7,6 +8,7 @@ import chat_list_items from "../../data/chat-list-contacts"
 import "./ChatList.css"
 
 function ChatList(props) {
+	console.log(props)
 	const onChatClick = (e) => {
 		const activeElement = document.getElementById("rec_"+props.activeChat)
 		activeElement.classList.remove("active")
@@ -15,12 +17,13 @@ function ChatList(props) {
 
 		props.setActiveChat(e.target.id[4])
 	}
+
 	return (
 		<div className='ChatList__div collection'>
-			<UserProfile name={props.userName}/>
+			<UserProfile name={props.userName} info={props.userInfo}/>
 			{chat_list_items.map((item) => {
 				const active = props.activeChat === item.id ? " active" : ""
-				
+
 				return (
 						<Card key={item.id}
 									id={"rec_"+item.id}
@@ -35,4 +38,12 @@ function ChatList(props) {
 	)
 }
 
-export default ChatList
+const mapStateToProps = (state) => {
+  return {
+    userInfo: state.auth.userInfo,
+    userName: state.auth.userName,
+    password: state.auth.password
+  }
+}
+
+export default connect(mapStateToProps)(ChatList)

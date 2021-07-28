@@ -35,8 +35,7 @@ function App() {
           <div className='App__div'>
             <ChatList
                 activeChat={activeChat}
-                setActiveChat={setActiveChat}
-                userName={userInfo.name}>
+                setActiveChat={setActiveChat}>
             </ChatList>
             <ChatContainer activeChat={activeChat} setActiveChat={setActiveChat}></ChatContainer>
           </div>

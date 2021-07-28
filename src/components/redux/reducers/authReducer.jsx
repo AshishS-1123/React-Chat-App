@@ -1,8 +1,9 @@
 import actionType from "../constants/actionTypes"
 
 const initState = {
-  userName: "",
-  password: ""
+  userInfo: "Harry Potter",
+  userName: "harry@gail.com",
+  password: "test@123"
 }
 
 function authReducer(state=initState, action) {

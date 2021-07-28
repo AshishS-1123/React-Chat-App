@@ -3,7 +3,8 @@ import { Card } from "@material-ui/core"
 import "./UserProfile.css"
 
 function UserProfile(props) {
-  const initials = "AS"
+  console.log(props.info.split(" "))
+  const initials = props.info.split(" ")[0][0] + props.info.split(" ")[1][0]
   const name = props.name
 
   return (

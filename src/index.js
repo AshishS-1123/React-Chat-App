@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux"
-
 import { FirebaseAppProvider } from "reactfire"
 
 import './index.css';
@@ -17,7 +16,6 @@ const firebaseConfig = {
     messagingSenderId: "365687744616",
     appId: "1:365687744616:web:4f4b4c708872c8fb7373dd",
     measurementId: "G-B087CLKVJY"
-
 }
 
 ReactDOM.render(
