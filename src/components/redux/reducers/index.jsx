@@ -1,13 +1,9 @@
 import { combineReducers } from "redux"
 
-import signInReducer from "./signInReducer"
-import signOutReducer from "./signOutReducer"
-import signUpReducer from "./signUpReducer"
+import authReducer from "./authReducer"
 
 const reducers = combineReducers({
-  signIn: signInReducer,
-  signOut: signOutReducer,
-  signUp: signUpReducer
+  auth: authReducer
 })
 
 export default reducers
