@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import firebase from "firebase/app"
 
 import Home from "./components/layout/Home"
 import SignIn from "./components/auth/SignIn"
@@ -10,6 +11,9 @@ import ChatContainer from "./components/layout/ChatContainer"
 import "./App.css";
 
 function App() {
+    var auth = firebase.auth();
+    auth.useEmulator("http://localhost:9099");
+
   // this the recipient that the user is currently chatting with
   const [activeChat, setActiveChat] = useState(1)
   // this is the information of the user that we got they logged in

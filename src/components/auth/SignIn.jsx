@@ -2,19 +2,34 @@ import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
 
+import { useFirebaseApp } from "reactfire"
+import "firebase/auth"
+
 import "./Auth.css"
 
 function SignIn(props) {
   const [info, setInfo] = useState({email: "", password: ""})
   const {userInfo, setUserInfo} = props
 
+  const firebase = useFirebaseApp()
+
   const onInputChange = (e) => {
     setInfo({...info, [e.target.id]: e.target.value})
   }
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = async (e) => {
     e.preventDefault()
     setUserInfo({...userInfo, email: info.email, password: info.password})
+
+    await firebase.auth().signInWithEmailAndPassword(info.email, info.password)
+        .then(result => {
+            if(!result.user.emailVerified) {
+                firebase.auth().signOut();
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
   }
 
   return(
