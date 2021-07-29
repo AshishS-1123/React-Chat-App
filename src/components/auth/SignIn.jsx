@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
-import { useFirebaseApp } from "reactfire"
 import { connect } from "react-redux"
 import "firebase/auth"
 
@@ -11,13 +10,11 @@ import "./Auth.css"
 function SignIn(props) {
   const [info, setInfo] = useState({email: "", password: ""})
 
-  const firebase = useFirebaseApp()
-
   const onInputChange = (e) => {
     setInfo({...info, [e.target.id]: e.target.value})
   }
 
-  const onFormSubmit = async (e) => {
+  const onFormSubmit = (e) => {
     e.preventDefault()
 
     props.signInUser(info.email, info.password)

@@ -26,10 +26,10 @@ function App() {
           <Home />
         </Route>
         <Route path='/signup'>
-          <SignUp setUserInfo={setUserInfo}></SignUp>
+          <SignUp></SignUp>
         </Route>
         <Route path='/signin'>
-          <SignIn setUserInfo={setUserInfo}></SignIn>
+          <SignIn>></SignIn>
         </Route>
         <Route exact path='/chats'>
           <div className='App__div'>

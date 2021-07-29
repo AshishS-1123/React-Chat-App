@@ -1,18 +1,13 @@
 import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 
-import { useFirebaseApp } from "reactfire"
-import "firebase/auth"
-
+import { signUpUser } from "../redux/actions/authActions.jsx"
 import "./Auth.css"
 
 function SignUp(props) {
   const [info, setInfo] = useState({email: "", password: "", name: ""})
-  const {userInfo, setUserInfo} = props
-
-  const firebase = useFirebaseApp()
-
 
   const onInputChange = (e) => {
     setInfo({...info, [e.target.id]: e.target.value})
@@ -20,15 +15,8 @@ function SignUp(props) {
 
   const onFormSubmit = async (e) => {
     e.preventDefault()
-    setUserInfo(info)
 
-    // asynchronously send a auth request to server. If everything is correct, then account will be created
-    await firebase.auth().createUserWithEmailAndPassword(info.email, info.password)
-        .then(result => {
-            result.user.updateProfile({displayName: info.name})
-        }).catch(error => {
-            console.log(error)
-        })
+    props.signUpUser(info.name, info.email, info.password)
   }
 
   return(
@@ -93,4 +81,10 @@ function SignUp(props) {
   )
 }
 
-export default SignUp
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signUpUser: (name, userName, password) => dispatch(signUpUser(name, userName, password))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(SignUp)
