@@ -5,7 +5,7 @@ import { FirebaseAppProvider } from "reactfire"
 
 import './index.css';
 import App from './App';
-import store from "./components/redux/store"
+import store from "./redux/store"
 
 const firebaseConfig = {
     apiKey: "AIzaSyAy9eLBk-3-m5L1jEvoUauEopCPQcaGAK4",

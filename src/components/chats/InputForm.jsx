@@ -8,7 +8,6 @@ function InputForm ({messages, setMessages}) {
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();
-		console.log(text);
 
 		let new_message = {id: messages.length+1, type: "sent", text: text}
 		setMessages([new_message, ...messages]);

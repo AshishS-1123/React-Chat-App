@@ -3,7 +3,7 @@ import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 
-import { signUpUser } from "../redux/actions/authActions.jsx"
+import { signUpUser } from "../../redux/actions/authActions.jsx"
 import "./Auth.css"
 
 function SignUp(props) {

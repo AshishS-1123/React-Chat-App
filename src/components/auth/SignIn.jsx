@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import "firebase/auth"
 
-import { signInUser } from "../redux/actions/authActions.jsx"
+import { signInUser } from "../../redux/actions/authActions.jsx"
 import "./Auth.css"
 
 function SignIn(props) {
