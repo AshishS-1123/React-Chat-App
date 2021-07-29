@@ -2,11 +2,23 @@
 // like sign in, sign up or log out
 import actionTypes from "../constants/actionTypes"
 
-function signInUser(userName, password) {
+export function signInUser(userName, password) {
   // first param is the dispatch function.
   // second param is method to get state if we need to
   return (dispatch, getState) => {
     // make a async call to db here, then dispatch action here
+    /*
+    await firebase.auth().signInWithEmailAndPassword(info.email, info.password)
+        .then(result => {
+            if(!result.user.emailVerified) {
+                firebase.auth().signOut();
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    */
+
     dispatch({
       type: actionTypes.SIGN_IN,
       payload: {
@@ -17,7 +29,7 @@ function signInUser(userName, password) {
   }
 }
 
-function signUpUser(firstName, userName, password) {
+export function signUpUser(firstName, userName, password) {
   // first param is the dispatch function.
   // second param is method to get state if we need to
   return (dispatch, getState) => {
@@ -34,7 +46,7 @@ function signUpUser(firstName, userName, password) {
   }
 }
 
-function signOutUser(userName) {
+export function signOutUser(userName) {
   // first param is the dispatch function.
   // second param is method to get state if we need to
   return (dispatch, getState) => {

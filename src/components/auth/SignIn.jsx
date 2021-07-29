@@ -1,15 +1,15 @@
 import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
 import { Link } from "react-router-dom"
-
 import { useFirebaseApp } from "reactfire"
+import { connect } from "react-redux"
 import "firebase/auth"
 
+import { signInUser } from "../redux/actions/authActions.jsx"
 import "./Auth.css"
 
 function SignIn(props) {
   const [info, setInfo] = useState({email: "", password: ""})
-  const {userInfo, setUserInfo} = props
 
   const firebase = useFirebaseApp()
 
@@ -19,17 +19,8 @@ function SignIn(props) {
 
   const onFormSubmit = async (e) => {
     e.preventDefault()
-    setUserInfo({...userInfo, email: info.email, password: info.password})
 
-    await firebase.auth().signInWithEmailAndPassword(info.email, info.password)
-        .then(result => {
-            if(!result.user.emailVerified) {
-                firebase.auth().signOut();
-            }
-        })
-        .catch(error => {
-            console.log(error)
-        })
+    props.signInUser(info.email, info.password)
   }
 
   return(
@@ -77,4 +68,10 @@ function SignIn(props) {
   )
 }
 
-export default SignIn
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signInUser: (userName, password) => dispatch(signInUser(userName, password))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(SignIn)

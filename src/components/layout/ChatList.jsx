@@ -8,7 +8,6 @@ import chat_list_items from "../../data/chat-list-contacts"
 import "./ChatList.css"
 
 function ChatList(props) {
-	console.log(props)
 	const onChatClick = (e) => {
 		const activeElement = document.getElementById("rec_"+props.activeChat)
 		activeElement.classList.remove("active")
