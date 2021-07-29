@@ -15,6 +15,8 @@ function authReducer(state=initState, action) {
       break
     case actionType.SIGN_OUT:
       break
+     default:
+      break
   }
 
   return state;
