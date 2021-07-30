@@ -1,0 +1,47 @@
+.LeftPane__container {
+  width: 24.1666vw;
+  height: 70.277vh;
+
+  background: #f2af4a;
+}
+
+.LeftPane__icons {
+  padding-top: 3vw;
+  margin-left: 2vw
+}
+
+.LeftPane__icon {
+  font-family: "Bold";
+  color: #f2af4a;
+  font-size: 35px;
+
+  background: white;
+  padding: 0px 3px 0px 3px;
+}
+
+.LeftPane__sitename {
+  font-family: "Bold";
+  font-size: 35px;
+  color: white;
+  padding-left: 10px;
+}
+
+.LeftPane__profInfo {
+  margin-top: 15vh;
+}
+
+.LeftPane__text1st {
+  font-family: "Semibold";
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  padding: 0 15.2% 0 15.2%;
+}
+
+.LeftPane__text2nd {
+    font-family: "Regular";
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-top: -10px;
+}
