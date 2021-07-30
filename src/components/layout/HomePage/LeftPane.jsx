@@ -4,7 +4,7 @@ import "./LeftPane.css"
 
 function LeftPane() {
   return (
-    <div className="LeftPane__container">
+    <article className="LeftPane__container">
       <div className="LeftPane__icons">
         <span className="LeftPane__icon">CC</span>
         <span className="LeftPane__sitename">chat cafe</span>
@@ -13,7 +13,7 @@ function LeftPane() {
         <p className="LeftPane__text1st">Stay connected from the comfort of your home.</p>
         <p className="LeftPane__text2nd">Anywhere. Anytime</p>
       </div>
-    </div>
+    </article>
   );
 }
 

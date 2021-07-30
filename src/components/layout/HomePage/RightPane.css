@@ -1,0 +1,14 @@
+.RightPane__container {
+  width: 34.6875vw;
+  height: 70.277vh;
+}
+
+.RightPane__heading {
+  font-family: "Semibold";
+  font-size: 37px;
+  color: #151515;
+
+  padding-left: 34px;
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+}
