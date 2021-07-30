@@ -8,6 +8,8 @@
   transform: translate(-50%, -50%);
 
   border-radius: 28px !important;
+
+  display: flex;
 }
 
 .Home__button {
