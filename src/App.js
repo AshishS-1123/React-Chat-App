@@ -11,8 +11,10 @@ import ChatContainer from "./components/layout/ChatContainer"
 import "./App.css";
 
 function App() {
-    var auth = firebase.auth();
-    auth.useEmulator("http://localhost:9099");
+    var auth = firebase.auth()
+    auth.useEmulator("http://localhost:9099")
+    //var db = firebase.firestore()
+    //db.useEmulator("localhost", 8080)
 
   // this the recipient that the user is currently chatting with
   const [activeChat, setActiveChat] = useState(1)
