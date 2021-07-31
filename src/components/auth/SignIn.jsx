@@ -26,7 +26,7 @@ function SignIn(props) {
 			  <InputLabel
 			  	className='Auth__label'
 			  	htmlFor="email">
-			  		Email
+			  		Enter your email here
 			  </InputLabel>
 			  <Input
 			    id="email"
@@ -40,7 +40,7 @@ function SignIn(props) {
         <InputLabel
 			  	className='Auth__label'
 			  	htmlFor="password">
-			  		Password
+			  		Enter a secure password
 			  </InputLabel>
 			  <Input
 			    id="password"
@@ -58,7 +58,7 @@ function SignIn(props) {
 		    type='submit'
 		  	onClick={onFormSubmit}>
 		  	    <Link to="/chats">
-              Sign In
+              Log In
             </Link>
   		  </Button>
     </Card>

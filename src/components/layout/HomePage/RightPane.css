@@ -1,6 +1,8 @@
 .RightPane__container {
   width: 34.6875vw;
   height: 70.277vh;
+
+  background: #efefef;
 }
 
 .RightPane__heading {
@@ -8,7 +10,7 @@
   font-size: 37px;
   color: #151515;
 
-  padding-left: 34px;
+  padding-left: 75px;
   margin-top: 15vh;
   margin-bottom: 5vh;
 }
