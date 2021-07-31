@@ -6,11 +6,24 @@ import SignUp from "../../auth/SignUp"
 
 import "./RightPane.css"
 
-function RightPane({heading, component}) {
-  console.log(heading)
+function RightPane({ component }) {
+
+  let heading = ""
+
+  switch(component) {
+    case "home_buttons":
+      heading = "Getting Started"
+      break
+    case "signin":
+      heading = "Sign In"
+      break
+    case "signup":
+      heading = "Log In"
+      break
+  }
 
   const componentFromName = () => {
-    if(component == "home_button") {
+    if(component == "home_buttons") {
       return <HomeButtons></HomeButtons>
     } else if(component == "signin") {
       return <SignIn></SignIn>

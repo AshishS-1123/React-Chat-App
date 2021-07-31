@@ -12,7 +12,7 @@ function Home() {
   return(
     <Card className="Home__card">
       <LeftPane></LeftPane>
-      <RightPane heading="Log In" component="signup"></RightPane>
+      <RightPane component="signin"></RightPane>
     </Card>
   );
 }
