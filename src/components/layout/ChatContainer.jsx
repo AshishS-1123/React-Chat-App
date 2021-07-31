@@ -20,10 +20,11 @@ function ChatContainer(props) {
   return (
       <div className="ChatContainer__div">
             <MessageList messages={messages}></MessageList>
-            <InputForm messages={messages} setMessages={setMessages} />
       </div>
   );
 
 }
 
 export default ChatContainer
+
+//<InputForm messages={messages} setMessages={setMessages} />

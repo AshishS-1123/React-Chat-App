@@ -1,0 +1,7 @@
+.App__div {
+	height: 94.4444vh;
+
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}

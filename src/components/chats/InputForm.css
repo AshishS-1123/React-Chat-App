@@ -1,6 +1,7 @@
 #InputForm__form {
 	width: 33vw;
-	height: 10vh;
+	height: 0vh;
+	visibility: hidden;
 
 	position: fixed;
 	bottom: 20px; left: 50%;
