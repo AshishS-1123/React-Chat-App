@@ -2,8 +2,6 @@ import React from "react"
 import { Card } from "@material-ui/core"
 import { connect } from "react-redux"
 
-import UserProfile from "./UserProfile"
-
 import chat_list_items from "../../data/chat-list-contacts"
 import "./ChatList.css"
 
@@ -19,7 +17,6 @@ function ChatList(props) {
 
 	return (
 		<div className='ChatList__div collection'>
-			<UserProfile name={props.userName} info={props.userInfo}/>
 			{chat_list_items.map((item) => {
 				const active = props.activeChat === item.id ? " active" : ""
 
