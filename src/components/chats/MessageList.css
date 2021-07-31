@@ -1,6 +1,7 @@
 #MessageList__container {
 	width: 41.4583vw;
-	height: 86.4444vh;
+	height: 82.4444vh;
+	padding-top: 4vh;
 
 	display: flex;
 	flex-direction: column;
@@ -10,18 +11,21 @@
 }
 
 .MessageList__card {
-	height: 6vh;
+	font-family: "Regular";
+	font-size: 27px;
+	background: #f2af4a !important;
 
-	margin: 0.2vw;
-	padding: 1em 1.2em;
+	padding: 15px 50px;
+	margin-left: 30px !important;
+	max-width: 40%;
 
-	align-self: flex-start;
-	border-radius: 30px !important;
-	border-top-left-radius: 0px !important;
+	border-radius: 500px !important;
+	border-top-left-radius: 7px !important;
 }
 
 .MessageList__card_sent {
+	margin-right: 30px !important;
+	border-top-right-radius: 7px !important;
+	border-top-left-radius: 500px !important;
 	align-self: flex-end;
-	border-top-left-radius: 30px !important;
-	border-top-right-radius: 0px !important;
 }
