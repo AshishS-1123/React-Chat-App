@@ -26,7 +26,7 @@ function SignUp(props) {
 			  <InputLabel
 			  	className='Auth__label'
 			  	htmlFor="email">
-			  		Email
+			  		Enter your email here
 			  </InputLabel>
 			  <Input
 			    id="email"
@@ -40,7 +40,7 @@ function SignUp(props) {
         <InputLabel
 			  	className='Auth__label'
 			  	htmlFor="name">
-			  		Name
+			  		Enter your nickname here
 			  </InputLabel>
 			  <Input
 			    id="name"
@@ -55,7 +55,7 @@ function SignUp(props) {
           <InputLabel
   			  	className='Auth__label'
   			  	htmlFor="password">
-  			  		Password
+  			  		Enter a secure password
   			  </InputLabel>
   			  <Input
   			    id="password"
