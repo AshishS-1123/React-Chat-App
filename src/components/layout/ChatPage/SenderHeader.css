@@ -1,0 +1,53 @@
+.SenderHeader__container {
+  height: 8vh;
+
+  background: #1a1a1a;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SenderHeader__hamburger {
+  height: 100%;
+  padding-top: 10px;
+}
+
+.SenderHeader__hamburgerbar {
+  height: 6px;
+  width: 70px;
+
+  margin-top: 20px;
+  margin-left: 30px;
+
+  background: white;
+}
+
+.SenderHeader__senderinfo {
+  font-family: "Semilight";
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 25px;
+
+  padding-top: 10px;
+}
+
+.SenderHeader__sendername {
+  margin: 0px;
+}
+
+.SenderHeader__senderemail {
+  margin: 0px;
+  text-align: center;
+}
+
+.SenderHeader__pic {
+  margin: 0.5vh 0 0.5vh 0;
+  margin-right: 30px;
+
+  height: 7vh;
+  width: 7vh;
+
+  background: #f2af4a;
+
+  border-radius: 50%;
+}

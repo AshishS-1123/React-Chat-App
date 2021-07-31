@@ -5,8 +5,8 @@ import firebase from "firebase/app"
 import Home from "./components/layout/Home"
 import SignIn from "./components/auth/SignIn"
 import SignUp from "./components/auth/SignUp"
-import ChatList from "./components/layout/ChatList"
-import ChatContainer from "./components/layout/ChatContainer"
+import ChatList from "./components/layout/ChatPage/ChatList"
+import ChatContainer from "./components/layout/ChatPage/ChatContainer"
 
 import "./App.css";
 

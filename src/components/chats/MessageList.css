@@ -1,12 +1,12 @@
 #MessageList__container {
 	width: 41.4583vw;
-	height: 94.4444vh;
+	height: 86.4444vh;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 
-	background: #eee
+	background: #1a1a1a;
 }
 
 .MessageList__card {
