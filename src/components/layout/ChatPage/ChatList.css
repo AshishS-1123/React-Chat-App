@@ -36,7 +36,7 @@
 
 .ChatList__card {
 	height: 7vh;
-	width: 100%;
+	width: calc(100% - 1.32815vw);
 
   display: flex;
   align-items: center;

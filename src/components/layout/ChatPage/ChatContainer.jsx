@@ -1,11 +1,11 @@
 import React from "react"
 import { useState, useEffect } from "react"
 
-import InputForm from "../chats/InputForm";
-import MessageList from "../chats/MessageList";
+import InputForm from "../../chats/InputForm";
+import MessageList from "../../chats/MessageList";
 
 import "./ChatContainer.css"
-import message_list from "../../data/messages"
+import message_list from "../../../data/messages"
 
 function ChatContainer(props) {
   const {activeChat, setActiveChat} = props
@@ -19,7 +19,7 @@ function ChatContainer(props) {
 
   return (
       <div className="ChatContainer__div">
-            <MessageList messages={messages}></MessageList>
+          <MessageList messages={messages}></MessageList>
       </div>
   );
 
