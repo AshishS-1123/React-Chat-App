@@ -17,15 +17,17 @@ function ChatList(props) {
 
 	return (
 		<div className='ChatList__div collection'>
+			<h1 className='ChatList__heading'>My Chats</h1>
+			<div className='ChatList__searchbar'>Search</div>
 			{chat_list_items.map((item) => {
-				const active = props.activeChat === item.id ? " active" : ""
 
 				return (
 						<Card key={item.id}
 									id={"rec_"+item.id}
-									className={"ChatList__card collection-item" + active}
+									className="ChatList__card"
 									onClick={onChatClick}>
-							{item.recipient_name}
+										<div className='ChatList__pic'></div>
+										<p className='ChatList__name'>{item.recipient_name}</p>
 						</Card>
 				)
 			}
