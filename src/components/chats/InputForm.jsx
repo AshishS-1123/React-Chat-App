@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
+import { FormControl, InputLabel, Input, IconButton } from "@material-ui/core";
 
+import SendIcon from "../../resources/send-icon.svg"
 import "./InputForm.css"
 
 function InputForm ({messages, setMessages}) {
+
 	const [text, setText] = useState("");
 
 	const onFormSubmit = (event) => {
@@ -29,16 +31,14 @@ function InputForm ({messages, setMessages}) {
 			    onChange={onInputChange}
 			  />
 
-			  <Button
+			<IconButton
 			  	id='InputForm__button'
-			  	variant='outlined'
-			  	color='primary'
 			    type='submit'
 					disabled={!text}
 			  	onClick={onFormSubmit}
 			  >
-			  	    send
-			  </Button>
+					<img src={SendIcon} alt='send button' id='InputForm__sendicon'/>
+			  </IconButton>
 		  </FormControl>
 		</form>
 		);
