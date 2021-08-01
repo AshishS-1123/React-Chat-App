@@ -33,15 +33,17 @@
 
 .SenderHeader__sendername {
   margin: 0px;
+  font-size: 32px;
 }
 
 .SenderHeader__senderemail {
   margin: 0px;
   text-align: center;
+  font-size: 18px;
 }
 
 .SenderHeader__pic {
-  margin: 0.5vh 0 0.5vh 0;
+  margin: 0.9vh 0 0.9vh 0;
   margin-right: 30px;
 
   height: 7vh;

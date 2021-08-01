@@ -13,10 +13,10 @@
 
 .MessageList__card {
 	font-family: "Regular";
-	font-size: 27px;
+	font-size: 20px;
 	background: #f2af4a !important;
 
-	padding: 12px 34px 20px 37px;
+	padding: 8px 30px 13px 37px;
 	margin-left: 30px !important;
 	margin-bottom: 10px;
 	max-width: 40%;

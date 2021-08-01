@@ -14,7 +14,7 @@
 	display: flex;
 	flex-direction: row;
 
-	background: #2d2620 !important;
+	background: #393028 !important;
 
 	border-radius: 3vh;
 }
@@ -25,9 +25,9 @@
 }
 
 #InputForm__input {
-	font-family: "Regular";
-	font-size: 27px;
+	font-family: "Semilight";
+	font-size: 22px;
 	padding-left: 40px;
 	margin-top: 10px;
-	color: rgba(255, 255, 255, 1);
+	color: white !important;
 }

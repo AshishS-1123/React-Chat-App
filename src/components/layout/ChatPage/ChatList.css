@@ -11,10 +11,10 @@
 .ChatList__heading {
 	font-family: "Semibold";
 	color: white;
-	font-size: 40px !important;
+	font-size: 28px !important;
 
-	padding-left: 19px;
-	padding-top: 41px;
+	padding-left: 20px;
+	padding-top: 21px;
 }
 
 .ChatList__searchbar {
@@ -23,7 +23,7 @@
 
 	background: #1a1a1a;
 
-	border-radius: 1.99vh;
+	border-radius: 2vh;
 
 	font-family: "Light";
 	font-size: 0.85vw;
@@ -31,7 +31,7 @@
 
 	box-sizing: border-box;
 	margin: 17px auto 54px auto;
-	padding: 10px 30px;
+	padding: 6px 25px;
 }
 
 .ChatList__card {
@@ -58,8 +58,8 @@
 }
 
 .ChatList__name {
-	margin-left: 20px;
+	margin-left: 10px;
 
 	font-family: "Semilight";
-	font-size: 34px;
+	font-size: 24px;
 }
