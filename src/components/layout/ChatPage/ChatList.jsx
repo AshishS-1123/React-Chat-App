@@ -7,11 +7,6 @@ import "./ChatList.css"
 
 function ChatList(props) {
 	const onChatClick = (e) => {
-		const activeElement = document.getElementById("rec_"+props.activeChat)
-		activeElement.classList.remove("active")
-
-		e.target.classList.add("active")
-
 		props.setActiveChat(e.target.id[4])
 	}
 
@@ -26,8 +21,8 @@ function ChatList(props) {
 									id={"rec_"+item.id}
 									className="ChatList__card"
 									onClick={onChatClick}>
-										<div className='ChatList__pic'></div>
-										<p className='ChatList__name'>{item.recipient_name}</p>
+										<div className='ChatList__pic' id={"pic_"+item.id}></div>
+										<p className='ChatList__name' id={"name"+item.id}>{item.recipient_name}</p>
 						</Card>
 				)
 			}

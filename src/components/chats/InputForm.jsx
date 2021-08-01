@@ -21,17 +21,11 @@ function InputForm ({messages, setMessages}) {
 	return (
 		<form id='InputForm__form'>
 		  <FormControl id='InputForm__formcontrol'>
-			  <InputLabel
-			  	id='InputForm__label'
-			  	htmlFor="InputForm__input"
-			  >
-			  		Enter Your Message
-			  </InputLabel>
-
 			  <Input
 			    id="InputForm__input"
 			    aria-describedby="input-for-message"
 			  	value={text}
+					placeholder='Enter your message here...'
 			    onChange={onInputChange}
 			  />
 

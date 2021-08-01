@@ -1,36 +1,33 @@
 #InputForm__form {
-	width: 33vw;
-	height: 0vh;
-	visibility: hidden;
+	width: 41.4583vw;
+	height: 6.2037vh;
 
 	position: fixed;
-	bottom: 20px; left: 50%;
-	transform: translateX(-50%);
+	bottom: 2.78vh;
 }
 
 #InputForm__formcontrol {
-	position: fixed;
-	bottom: 0px; left: 50%;
-	transform: translateX(-50%);
-
-	height: 5vh;
-	width: 50vw;
-	max-width: 700px;
-	background: rgba(255,255,255,1);
+	width: 38.31247vw;
+	height: 6.2037vh;
+	margin: 0 auto !important;
 
 	display: flex;
 	flex-direction: row;
+
+	background: #2d2620 !important;
+
+	border-radius: 3vh;
 }
 
-#InputForm__label, #InputForm__input {
-	width: 50vw;
-	max-width: 700px;
-	border: 0px !important;
-}
-input[type="text"]:not(.browser-default) {
-	box-shadow: none !important;
+.MuiInput-formControl {
+	width: 80%;
+	height: 5.2vh;
 }
 
-#InputForm__button {
-	width: 3vw;
+#InputForm__input {
+	font-family: "Regular";
+	font-size: 27px;
+	padding-left: 40px;
+	margin-top: 10px;
+	color: rgba(255, 255, 255, 1);
 }

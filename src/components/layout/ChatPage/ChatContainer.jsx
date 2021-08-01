@@ -22,6 +22,7 @@ function ChatContainer(props) {
       <div className="ChatContainer__div">
           <SenderHeader />
           <MessageList messages={messages}></MessageList>
+          <InputForm messages={messages} setMessages={setMessages}></InputForm>
       </div>
   );
 
