@@ -11,7 +11,7 @@ function ChatList(props) {
 	}
 
 	return (
-		<div className='ChatList__div collection'>
+		<div className='ChatList__div'>
 			<h1 className='ChatList__heading'>My Chats</h1>
 			<div className='ChatList__searchbar'>Search</div>
 			{chat_list_items.map((item) => {

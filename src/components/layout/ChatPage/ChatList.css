@@ -1,11 +1,12 @@
 .ChatList__div {
-	width: 19.0104vw;
-	height: 94.4444vh;
+	min-width: 364.8px;
+	min-height: 94.4444vh;
+	overflow: visible !important;
 
 	float: left;
 	background: #2d2620;
 
-	border-radius: 2.0833vw 0 0 2.0833vw;
+	border-radius: 39.99936px 0 0 39.99936px;
 }
 
 .ChatList__heading {
@@ -18,15 +19,15 @@
 }
 
 .ChatList__searchbar {
-	width: 16.3541vw;
-	height: 3.9814vh;
+	width: 288.93px;
+	height: 38.778836px;
 
 	background: #1a1a1a;
 
-	border-radius: 2vh;
+	border-radius: 19.48px;
 
 	font-family: "Light";
-	font-size: 0.85vw;
+	font-size: 15.36px;
 	color: rgba(255, 255, 255, 0.94);
 
 	box-sizing: border-box;
@@ -35,13 +36,13 @@
 }
 
 .ChatList__card {
-	height: 7vh;
-	width: calc(100% - 1.32815vw);
+	height: 68.18px;
+	width: 339.3px;
 
   display: flex;
   align-items: center;
 
-	margin-left: 1.32815vw;
+	margin-left: 25.5008px;
 
 	background: #2d2620 !important;
 	color: white !important;
@@ -49,8 +50,8 @@
 }
 
 .ChatList__pic {
-	height: 3.125vw;
-	width: 3.125vw;
+	height: 60px;
+	width: 60px;
 
 	background: #f2af4a;
 
@@ -61,5 +62,11 @@
 	margin-left: 10px;
 
 	font-family: "Semilight";
-	font-size: 24px;
+	font-size: 21px;
+}
+
+@media only screen and (max-width : 1175px) {
+	.ChatList__div {
+		display: none;
+	}
 }

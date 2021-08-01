@@ -1,7 +1,7 @@
 #MessageList__container {
-	width: 41.4583vw;
+	min-width: 795.983px;
 	min-height: 82.4444vh;
-	padding-top: 4vh;
+	padding-top: 38.96px;
 
 	display: flex;
 	flex-direction: column;
@@ -30,4 +30,28 @@
 	border-top-right-radius: 7px !important;
 	border-top-left-radius: 500px !important;
 	align-self: flex-end;
+}
+
+@media only screen and (max-width : 1175px) {
+	#MessageLsist__container {
+		min-width: 0px;
+		width: 98vw !important;
+	}
+
+	.MessageList__card {
+		padding: 8px 20px 8px 20px;
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width : 792px) {
+	#MessageList__container {
+		min-width: 0px;
+		width: 98vw !important;
+		height: 100vh !important;
+		margin: 0px;
+	}
+	.MessageList__card {
+		font-size: 15px;
+	}
 }

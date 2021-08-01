@@ -1,5 +1,6 @@
 .SenderHeader__container {
-  height: 8vh;
+  height: 77.92px;
+  min-width: 795.983px;
 
   background: #1a1a1a;
 
@@ -43,13 +44,27 @@
 }
 
 .SenderHeader__pic {
-  margin: 0.9vh 0 0.9vh 0;
+  margin: 8.766px 0 8.766px 0;
   margin-right: 30px;
 
-  height: 7vh;
-  width: 7vh;
+  height: 68.18px;
+  width: 68.18px;
 
   background: #f2af4a;
 
   border-radius: 50%;
+}
+
+@media only screen and (max-width : 792px) {
+  .SenderHeader__container {
+    min-width: 0px;
+    width: 98vw;
+  }
+  .SenderHeader__sendername {
+    font-size:25px;
+  }
+
+  .SenderHeader__senderemail {
+    font-size: 13px;
+  }
 }

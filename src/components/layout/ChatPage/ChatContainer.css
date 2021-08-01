@@ -1,6 +1,15 @@
 .ChatContainer__div {
-	width: 41.4583vw;
+	min-width: 795.983px;
 	margin-left: 5px;
 
 	float: left;
+}
+
+@media only screen and (max-width : 792px) {
+	.ChatContainer__div {
+		min-width: 0px;
+		width: 98vw;
+		margin: 0px;
+		height: 100vh !important;
+	}
 }

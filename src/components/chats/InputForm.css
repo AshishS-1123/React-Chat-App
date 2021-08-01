@@ -1,28 +1,29 @@
 #InputForm__form {
-	width: 41.4583vw;
-	height: 6.2037vh;
+	width: 795.99936px;
+	height: 60.424038px;
 
 	position: fixed;
-	bottom: 2.78vh;
+	bottom: 27.0772px;
 }
 
 #InputForm__formcontrol {
-	width: 38.31247vw;
-	height: 6.2037vh;
+	width: 735.599424px;
+	height: 60.424038px;
 	margin: 0 auto !important;
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 
 	background: #393028 !important;
 
-	border-radius: 3vh;
+	border-radius: 29.22px;
 }
 
 .MuiInput-formControl {
 	width: 80%;
-	height: 5.2vh;
+	height: 50.648px;
 }
 
 #InputForm__input {
@@ -34,7 +35,7 @@
 }
 
 #InputForm__button {
-	height: 6.2037vh;
+	height: 60.424038px;
 	margin: 0px;
 	padding: 0px;
 	box-shadow: none;
@@ -42,9 +43,33 @@
 
 .MuiIconButton-root {
 	background: rgba(0, 0, 0, 0) !important;
-	right: 1vh; bottom: 0.5vh;
+	right: 9.74px; bottom: 4.87px;
 }
 
 #InputForm__sendicon {
-	height: 6.2037vh;
+	height: 60.424038px;
+}
+
+@media only screen and (max-width : 792px) {
+	#InputForm__input {
+		font-size: 16px;
+		height: 50px;
+	}
+
+	#InputForm__form {
+		width: 98%;
+		bottom: -2vh;
+	}
+	#InputForm__formcontrol {
+		width: 98%;
+		height: 50px;
+	}
+	#InputForm__input {
+		margin-top: 0px;
+		padding-left: 20px;
+	}
+	#InputForm__sendicon {
+		height: 50px;
+	}
+
 }

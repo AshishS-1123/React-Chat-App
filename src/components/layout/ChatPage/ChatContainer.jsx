@@ -29,5 +29,3 @@ function ChatContainer(props) {
 }
 
 export default ChatContainer
-
-//<InputForm messages={messages} setMessages={setMessages} />
