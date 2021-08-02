@@ -9,7 +9,9 @@ const actionTypes = {
   // this action will allow a signed in user to send a message to another user
   POST_MESSAGE: "POST_MESSAGE",
   // this action will allow a signed user to recieve and see the chats from another user
-  REQUEST_MESSAGES: "REQUEST_MESSAGES"
+  REQUEST_MESSAGES: "REQUEST_MESSAGES",
+  // this action will add a new person to user's chat list so they can chat with each other
+  ADD_RECIPIENT: "ADD_RECIPIENT"
 }
 
 export default actionTypes
