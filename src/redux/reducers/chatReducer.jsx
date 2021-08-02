@@ -4,7 +4,28 @@ import actionTypes from "../constants/actionTypes"
 // structure of each message will be
 // { sender: "", message: "", timestamp: "" }
 const initState = {
-  recipients: [],
+  recipients: [
+    {
+      id: 1,
+      recipient_name: "Chandler Bing"
+    },
+    {
+      id: 2,
+      recipient_name: "Monica Geller"
+    },
+    {
+      id: 3,
+      recipient_name: "Phoebe Buffay"
+    },
+    {
+      id: 4,
+      recipient_name: "Ross Geller"
+    },
+    {
+      id: 5,
+      recipient_name: "Rachel Green"
+    }
+  ],
   messages: []
 }
 

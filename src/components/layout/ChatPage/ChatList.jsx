@@ -1,11 +1,15 @@
 import React from "react"
 import { Card } from "@material-ui/core"
-import { connect } from "react-redux"
+import { useSelector, connect } from "react-redux"
 
-import chat_list_items from "../../../data/chat-list-contacts"
+//import chat_list_items from "../../../data/chat-list-contacts"
 import "./ChatList.css"
 
 function ChatList(props) {
+	const chats = useSelector((state) => state.chat)
+
+	const chat_list_items = chats.recipients
+
 	const onChatClick = (e) => {
 		props.setActiveChat(e.target.id[4])
 	}
