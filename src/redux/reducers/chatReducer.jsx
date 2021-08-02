@@ -26,7 +26,16 @@ const initState = {
       recipient_name: "Rachel Green"
     }
   ],
-  messages: []
+  messages: [
+    {
+      id: 1,
+      text: "hi"
+    },
+    {
+      id: 2,
+      text: "how are you"
+    }
+  ]
 }
 
 function chatReducer(state=initState, action) {
