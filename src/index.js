@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux"
 import { FirebaseAppProvider } from "reactfire"
 
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
+
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import { createFirestoreInstance } from 'redux-firestore'
+
 import './index.css';
 import App from './App';
 import store from "./redux/store"
@@ -18,10 +25,19 @@ const firebaseConfig = {
     measurementId: "G-B087CLKVJY"
 }
 
+const rrfProps = {
+  firebase,
+  config: firebaseConfig,
+  dispatch: store.dispatch,
+  createFirestoreInstance
+}
+
 ReactDOM.render(
   <FirebaseAppProvider firebaseConfig={firebaseConfig}>
     <Provider store={store}>
-      <App />
+      <ReactReduxFirebaseProvider {...rrfProps}>
+        <App />
+      </ReactReduxFirebaseProvider>
     </Provider>
   </FirebaseAppProvider>,
   document.getElementById('root')
