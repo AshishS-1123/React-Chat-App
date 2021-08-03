@@ -2,8 +2,8 @@ import React from "react"
 import { useState } from "react"
 import { useSelector } from "react-redux"
 
-import InputForm from "../../chats/InputForm"
-import MessageList from "../../chats/MessageList"
+import InputForm from "./ChatContainer/InputForm"
+import MessageList from "./ChatContainer/MessageList"
 import SenderHeader from "./SenderHeader"
 
 import "./ChatContainer.css"
