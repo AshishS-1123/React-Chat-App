@@ -1,8 +1,5 @@
 import actionTypes from "../constants/actionTypes"
 
-// each item in messages will represent a message from some user.
-// structure of each message will be
-// { sender: "", message: "", timestamp: "" }
 const initState = {
   recipients: [
     {
