@@ -5,13 +5,18 @@ const actionTypes = {
   SIGN_UP: "SIGN_UP",
   // this action will allow a signed user to sign out
   SIGN_OUT: "SIGN_OUT",
+  // this action will allow us to handle if there were some errors when signing in
+  ERROR_SIGN_IN: "ERROR_SIGN_IN",
+  // this action will allow us to handle if there were some errors when signing up
+  ERROR_SIGN_UP: "ERROR_SIGN_UP",
+  // this action will allow us to handle if there were any errors when signing out
+  ERROR_SIGN_OUT: "ERROR_SIGN_OUT",
+
 
   // this action will allow a signed in user to send a message to another user
   POST_MESSAGE: "POST_MESSAGE",
-  // this action will allow a signed user to recieve and see the chats from another user
-  REQUEST_MESSAGES: "REQUEST_MESSAGES",
-  // this action will add a new person to user's chat list so they can chat with each other
-  ADD_RECIPIENT: "ADD_RECIPIENT"
+  // this action will allow fetching all data related to chats of the current user
+  FETCH_GROUP: "FETCH_GROUP"
 }
 
 export default actionTypes
