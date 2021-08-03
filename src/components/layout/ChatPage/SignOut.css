@@ -1,0 +1,20 @@
+button.MuiButtonBase-root.SignOut__button {
+  width: 100%;
+  position: relative !important;
+  top: 33.3333vh !important;
+  transform: translateY(-50%) !important;
+
+  border-bottom-left-radius: 39.99936px !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  background: #2d2620;
+  color: white !important;
+
+  font-family: "Semilight";
+  font-size: 26px;
+}
+button.MuiButtonBase-root.SignOut__button:hover {
+  background: #2d2620 !important;
+
+}
