@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
-import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import "firebase/auth"
 
@@ -57,9 +56,7 @@ function SignIn(props) {
 		  	color='primary'
 		    type='submit'
 		  	onClick={onFormSubmit}>
-		  	    <Link to="/chats">
-              Log In
-            </Link>
+            Log In
   		  </Button>
     </Card>
   )

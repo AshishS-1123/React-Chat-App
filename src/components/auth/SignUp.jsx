@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Card, FormControl, InputLabel, Input, Button } from "@material-ui/core"
-import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 
 import { signUpUser } from "../../redux/actions/authActions.jsx"
@@ -72,9 +71,7 @@ function SignUp(props) {
 		  	color='primary'
 		    type='submit'
 		  	onClick={onFormSubmit}>
-		  	    <Link to="/chats">
-              Sign Up
-            </Link>
+		  	    Sign Up
 		  </Button>
 
     </Card>
