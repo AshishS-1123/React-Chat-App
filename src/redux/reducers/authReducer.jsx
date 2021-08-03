@@ -1,9 +1,9 @@
 import actionType from "../constants/actionTypes"
 
 const initState = {
-  userInfo: "Harry Potter",
-  userName: "harry@gail.com",
-  password: "test@123",
+  userInfo: "",
+  userName: "",
+  password: "",
   authError: null
 }
 
@@ -11,16 +11,17 @@ function authReducer(state=initState, action) {
 
   switch(action.type) {
     case actionType.SIGN_IN:
-      console.log("singin in success");
+      state = {...state,
+                  userName: action.payload.userName,
+                  password: action.payload.password,
+                  authError: null
+              }
       break
     case actionType.ERROR_SIGN_IN:
-      console.log("some error on signup")
       state = {...state, authError: "LOGIN FAILED"}
       break
-    case actionType.SIGN_IN_SUCCESS:
-      console.log("sigin in was successful")
-      state = {...state, authError: null}
-      break
+    case actionType.SIGN_OUT:
+      state = {...state, userName: "", password: "", authError: null}
      default:
       break
   }

@@ -9,8 +9,6 @@ const actionTypes = {
   ERROR_SIGN_IN: "ERROR_SIGN_IN",
   // this action will allow us to handle if there were some errors when signing up
   ERROR_SIGN_UP: "ERROR_SIGN_UP",
-  // this action will allow us to handle if there were any errors when signing out
-  ERROR_SIGN_OUT: "ERROR_SIGN_OUT",
 
 
   // this action will allow a signed in user to send a message to another user
