@@ -3,6 +3,7 @@ import { Card } from "@material-ui/core"
 import { useSelector, connect } from "react-redux"
 
 import "./ChatList.css"
+import SignOut from "./SignOut"
 
 function ChatList(props) {
 	const chats = useSelector((state) => state.chat)
@@ -27,9 +28,10 @@ function ChatList(props) {
 										<div className='ChatList__pic' id={"pic_"+item.id}></div>
 										<p className='ChatList__name' id={"name"+item.id}>{item.recipient_name}</p>
 						</Card>
-				)
-			}
-		)}
+					)
+				}
+			)}
+			<SignOut />
 		</div>
 	)
 }
