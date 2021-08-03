@@ -5,27 +5,24 @@ import actionTypes from "../constants/actionTypes"
 export function signInUser(userName, password) {
   // first param is the dispatch function.
   // second param is method to get state if we need to
-  return (dispatch, getState) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase();
+
     // make a async call to db here, then dispatch action here
-    /*
-    await firebase.auth().signInWithEmailAndPassword(info.email, info.password)
+
+    firebase.auth().signInWithEmailAndPassword(userName, password)
         .then(result => {
-            if(!result.user.emailVerified) {
-                firebase.auth().signOut();
-            }
+            dispatch({
+              type: actionTypes.SIGN_IN,
+              payload: { userName, password }
+            })
         })
         .catch(error => {
-            console.log(error)
+            dispatch({
+              type: actionTypes.ERROR_SIGN_IN,
+              error: "Incorrect Password"
+            })
         })
-    */
-
-    dispatch({
-      type: actionTypes.SIGN_IN,
-      payload: {
-        userName: userName,
-        password: password
-      }
-    })
   }
 }
 
