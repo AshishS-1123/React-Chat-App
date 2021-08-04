@@ -88,3 +88,13 @@ Then this firebase object is used to peform authentication using the email and p
 
 The signInWithEmailAndPassword function returns a promise. If the user was authenticated successfully, then we dispatch the SIGN_IN action that enters the users credentials into the state.
 Otherwise, we dispatch a ERROR_SIGN_IN action which informs the user that some error occured.
+
+### Reducers
+
+##### Auth Reducer
+
+The auth reducer is executed when any action related to authenticating the user is dispatched.
+The Auth reducer is a function that takes 2 parameters, state and action. It returns the new state based on the value of the current state and the action.
+
+In the Auth reducer, we first check what kind of action has been dispatched- SIGN_IN, ERROR_SIGN_IN, etc. If the SIGN_IN action was dispatched, then it updates the state with the username and password given in the payload of the action.
+In case some error occured with signin, then the ERROR_SIGN_IN action would be recieved. In this case, we set the userName and password to empty strings and set the authError to the error string recieved in the payload. This error will be used in the components to inform the user exactly what error occured.
