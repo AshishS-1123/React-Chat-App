@@ -98,3 +98,18 @@ The Auth reducer is a function that takes 2 parameters, state and action. It ret
 
 In the Auth reducer, we first check what kind of action has been dispatched- SIGN_IN, ERROR_SIGN_IN, etc. If the SIGN_IN action was dispatched, then it updates the state with the username and password given in the payload of the action.
 In case some error occured with signin, then the ERROR_SIGN_IN action would be recieved. In this case, we set the userName and password to empty strings and set the authError to the error string recieved in the payload. This error will be used in the components to inform the user exactly what error occured.
+
+##### Root Reducer
+
+As the application scales, there are going to be lots of reducers for various features- SignIn, SignOut, SignUp, SendMessage, etc. Inorder to manage to store easily, we combine all the reducers into a single reducer that we can pass to the store.
+
+This is done using the ```combineReducers``` method from *Redux*.
+
+```javascript
+  const rootreducer = combineReducers({
+    auth: authReducer,
+    chat: chatreducer
+  })
+```
+
+The combineReducers method takes an object containing various reducers as key value pairs and returns a single reducer.
