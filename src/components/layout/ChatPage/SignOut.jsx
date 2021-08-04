@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from '@material-ui/core'
 import { connect } from 'react-redux'
 
-import actionType from "../../../redux/constants/actionTypes"
 import { signOutUser } from "../../../redux/actions/authActions"
 import "./SignOut.css"
 

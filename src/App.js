@@ -1,11 +1,8 @@
 import { useState } from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import firebase from "firebase/app"
 import { connect } from 'react-redux'
 
 import Home from "./components/layout/Home"
-import SignIn from "./components/auth/SignIn"
-import SignUp from "./components/auth/SignUp"
 import ChatList from "./components/layout/ChatPage/ChatList"
 import ChatContainer from "./components/layout/ChatPage/ChatContainer"
 
@@ -22,11 +19,7 @@ function App(props) {
   // this the recipient that the user is currently chatting with
   const [activeChat, setActiveChat] = useState(1)
   // this is the information of the user that we got they logged in
-  const [userInfo, setUserInfo] = useState({
-    name: props.userName || "",
-    email:props.email || "",
-    password:""
-  })
+  
 
   if(props.isLoggedIn) {
     console.log("user already logged in")

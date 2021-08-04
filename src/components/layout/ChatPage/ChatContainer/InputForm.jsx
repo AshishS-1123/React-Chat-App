@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormControl, InputLabel, Input, IconButton } from "@material-ui/core";
+import { FormControl, Input, IconButton } from "@material-ui/core";
 
 import SendIcon from "../../../../resources/send-icon.svg"
 import "./InputForm.css"

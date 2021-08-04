@@ -26,7 +26,7 @@ export function signInUser(userName, password) {
   }
 }
 
-export function signUpUser(firstName, userName, password, {}) {
+export function signUpUser(firstName, userName, password) {
   // first param is the dispatch function.
   // second param is method to get state if we need to
   return (dispatch, getState) => {

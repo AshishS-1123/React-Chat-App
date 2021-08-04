@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Button, Card } from "@material-ui/core"
+import { Card } from "@material-ui/core"
 
 import LeftPane from "./HomePage/LeftPane"
 import RightPane from "./HomePage/RightPane"

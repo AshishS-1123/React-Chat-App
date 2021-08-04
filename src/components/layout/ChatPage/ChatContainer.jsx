@@ -7,7 +7,6 @@ import MessageList from "./ChatContainer/MessageList"
 import SenderHeader from "./SenderHeader"
 
 import "./ChatContainer.css"
-import message_list from "../../../data/messages"
 
 function ChatContainer(props) {
   const chats = useSelector((state) => state.chat)

@@ -20,12 +20,14 @@ function RightPane({ paneComponent, setPaneComponent }) {
     case "signup":
       heading = "Log In"
       break
+    default:
+      break
   }
 
   const componentFromName = () => {
-    if(paneComponent == "home_buttons") {
+    if(paneComponent === "home_buttons") {
       return <HomeButtons setPaneComponent={setPaneComponent}></HomeButtons>
-    } else if(paneComponent == "signin") {
+    } else if(paneComponent === "signin") {
       return <SignIn></SignIn>
     } else {
       return <SignUp></SignUp>
