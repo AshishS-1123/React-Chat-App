@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Button, Card } from "@material-ui/core"
 
 import LeftPane from "./HomePage/LeftPane"
@@ -8,10 +8,12 @@ import "./Home.css"
 
 function Home() {
 
+  const [paneComponent, setPaneComponent] = useState("home_buttons")
+
   return(
     <Card className="Home__card">
       <LeftPane></LeftPane>
-      <RightPane component="signin"></RightPane>
+      <RightPane paneComponent={paneComponent} setPaneComponent={setPaneComponent}></RightPane>
     </Card>
   );
 }

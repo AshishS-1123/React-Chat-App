@@ -6,11 +6,11 @@ import SignUp from "../../auth/SignUp"
 
 import "./RightPane.css"
 
-function RightPane({ component }) {
+function RightPane({ paneComponent, setPaneComponent }) {
 
   let heading = ""
 
-  switch(component) {
+  switch(paneComponent) {
     case "home_buttons":
       heading = "Getting Started"
       break
@@ -23,9 +23,9 @@ function RightPane({ component }) {
   }
 
   const componentFromName = () => {
-    if(component == "home_buttons") {
-      return <HomeButtons></HomeButtons>
-    } else if(component == "signin") {
+    if(paneComponent == "home_buttons") {
+      return <HomeButtons setPaneComponent={setPaneComponent}></HomeButtons>
+    } else if(paneComponent == "signin") {
       return <SignIn></SignIn>
     } else {
       return <SignUp></SignUp>
@@ -35,7 +35,7 @@ function RightPane({ component }) {
   return (
     <article className="RightPane__container">
       <h1 className="RightPane__heading">{heading}</h1>
-      { componentFromName(component) }
+      { componentFromName() }
     </article>
   );
 }
