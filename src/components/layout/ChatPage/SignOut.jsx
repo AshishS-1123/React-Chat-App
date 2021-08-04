@@ -3,6 +3,7 @@ import { Button } from '@material-ui/core'
 import { connect } from 'react-redux'
 
 import actionType from "../../../redux/constants/actionTypes"
+import { signOutUser } from "../../../redux/actions/authActions"
 import "./SignOut.css"
 
 function SignOut(props) {
@@ -19,7 +20,7 @@ function SignOut(props) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signOutUser: () => dispatch({type: actionType.SIGN_OUT})
+    signOutUser: () => dispatch(signOutUser())
   }
 }
 

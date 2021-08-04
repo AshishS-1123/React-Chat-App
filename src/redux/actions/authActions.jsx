@@ -26,7 +26,7 @@ export function signInUser(userName, password) {
   }
 }
 
-export function signUpUser(firstName, userName, password) {
+export function signUpUser(firstName, userName, password, {}) {
   // first param is the dispatch function.
   // second param is method to get state if we need to
   return (dispatch, getState) => {
@@ -43,17 +43,19 @@ export function signUpUser(firstName, userName, password) {
   }
 }
 
-export function signOutUser(userName) {
+export function signOutUser() {
   // first param is the dispatch function.
   // second param is method to get state if we need to
-  return (dispatch, getState) => {
+  return (dispatch, getState, {getFirebase}) => {
     // make a async call to db here, then dispatch action here
+    const firebase = getFirebase()
 
-    dispatch({
-      type: actionTypes.SIGN_OUT,
-      payload: {
-        userName: userName
-      }
+    firebase.auth().signOut().then(() => {
+      console.log("signed out")
+      dispatch({
+        type: actionTypes.SIGN_OUT,
+        payload: null
+      })
     })
   }
 }
