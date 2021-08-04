@@ -32,3 +32,59 @@ Reducers must be pure functions. The output they produce depends only on the cur
 - ```constants``` - This folder defines actions types and stores then as constants.
 - ```reducers``` - This folder contains reducers for each actions.
 - ```store.jsx``` - This file contains the actual store with all the necessary settings.
+
+### Actions
+
+##### Auth Actions
+
+Auth actions are used for authenticating the user- Sign In, Sign Out and Sing Up.
+When these actions are dispatched, we also need to perform some API requests to the firebase server.
+For example, when signing in, we need to check if a user exists or if the password is correct. But according to the principles of Redux, we cannot perform any side effect.
+
+
+This is where Thunk comes in. Thunk is a middleware for Redux.
+Using Thunk, we can perform some asynchronous activity like fetching some data from the server, and after that is complete, log the user in successfully.
+
+For example, consider the SignIn action,
+
+```javascript
+function signInUser(userName, password) {
+
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase();
+
+    firebase.auth().signInWithEmailAndPassword(userName, password)
+        .then(result => {
+            dispatch({
+              type: actionTypes.SIGN_IN,
+              payload: { userName, password }
+            })
+        })
+        .catch(error => {
+            dispatch({
+              type: actionTypes.ERROR_SIGN_IN,
+              error: "Incorrect Password"
+            })
+        })
+  }
+}
+```
+
+Let's look at this code line by line.
+
+The code defines a ```signInUser``` method. This method takes 2 paramters- the userName and the password.
+Normally, the action would just return an object containing the type and payload for that action.
+
+But since we are using Thunk and want to perform requests to the backend, we will return an arrow function that dispatches the required action.
+This dispatch occurs only after we recieve some data/error from the backend.
+
+The arrow function takes a couple of parameters-
+  - **dispatch** - *function to dispatch actions*
+  - **getState** - *function to get the current state*
+  - **{getFirebase, getFirestore}** -  *function for getting the firebase and firestore instances*
+
+In this function, we first create and instance of firebase so that we can interact with the backend.
+Then this firebase object is used to peform authentication using the email and password we provided.
+
+The signInWithEmailAndPassword function returns a promise. If the user was authenticated successfully, then we dispatch the SIGN_IN action that enters the users credentials into the state.
+Otherwise, we dispatch a ERROR_SIGN_IN action which informs the user that some error occured.
