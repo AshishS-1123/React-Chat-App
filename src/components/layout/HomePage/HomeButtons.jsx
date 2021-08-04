@@ -10,12 +10,12 @@ function HomeButtons({setPaneComponent}) {
     <div className="HomeButtons__container">
       <Button
         className="HomeButtons__button"
-        onClick={() => {setPaneComponent("signup")}}>
+        onClick={() => {setPaneComponent("signin")}}>
           Log in to your account
       </Button>
       <Button
         className="HomeButtons__button"
-        onClick={() => {setPaneComponent("signin")}}>
+        onClick={() => {setPaneComponent("signup")}}>
           Create a new account
       </Button>
     </div>

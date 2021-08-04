@@ -34,32 +34,6 @@ function App(props) {
       </div>
     ) : <Home />
   )
-/*
-  return (
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/signup'>
-          <SignUp></SignUp>
-        </Route>
-        <Route path='/signin'>
-          <SignIn>></SignIn>
-        </Route>
-        <Route exact path='/chats'>
-          <div className='App__div'>
-            <ChatList
-                activeChat={activeChat}
-                setActiveChat={setActiveChat}>
-            </ChatList>
-            <ChatContainer activeChat={activeChat} setActiveChat={setActiveChat}></ChatContainer>
-          </div>
-        </Route>
-      </Switch>
-    </Router>
-  )
-  */
 }
 
 const mapStateToProps = (state) => {
