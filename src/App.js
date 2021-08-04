@@ -10,6 +10,7 @@ import ChatList from "./components/layout/ChatPage/ChatList"
 import ChatContainer from "./components/layout/ChatPage/ChatContainer"
 
 import "./App.css";
+import actionTypes from "./redux/constants/actionTypes"
 
 function App(props) {
 
@@ -21,7 +22,16 @@ function App(props) {
   // this the recipient that the user is currently chatting with
   const [activeChat, setActiveChat] = useState(1)
   // this is the information of the user that we got they logged in
-  const [userInfo, setUserInfo] = useState({name:"", email:"", password:""})
+  const [userInfo, setUserInfo] = useState({
+    name: props.userName || "",
+    email:props.email || "",
+    password:""
+  })
+
+  if(props.isLoggedIn) {
+    console.log("user already logged in")
+    props.signIn(props.userName, "")
+  }
 
   return (
     props.isLoggedIn ? (
@@ -38,8 +48,18 @@ function App(props) {
 
 const mapStateToProps = (state) => {
   return {
-    isLoggedIn: state.auth.userName != ""
+    isLoggedIn: state.firebase.auth.email,
+    userName: state.firebase.auth.email,
+    name: state.firebase.auth.displayName
   }
 }
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (userName, password) => dispatch({
+      type: actionTypes.SIGN_IN,
+      payload: {userName, password}})
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
