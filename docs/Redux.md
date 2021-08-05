@@ -137,4 +137,26 @@ To access state from components,
 
 When exporting the component, we do not export it directly, we call the connect method imported from *react-redux*.
 The **connect** method takes a function as paramter and returns a higher order component.
-The function taken as parameter, **mapStateToProps** takes the store as parameter and returns an object. The keys defined in this object are passed as props to the component defined. The values of these keys can be taken from the store. 
+The function taken as parameter, **mapStateToProps** takes the store as parameter and returns an object. The keys defined in this object are passed as props to the component defined. The values of these keys can be taken from the store.
+
+### Accessing Dispatch method from Components.
+
+To access the dispatch method from components,
+
+```javascript
+  import { connect } from 'react-redux'
+
+  function Component(props) {
+    ...
+  }
+
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      dispatchAction_1: dispatch({type: "", payload: {}})
+    }
+  }
+
+  export default connect(null, mapDispatchToProps)(Component)
+```
+
+This works just like accessing store from components. The only difference is the **mapDispatchToProps** method is passed as the second param to connect. Since the first param is reserved for state method, it is **null**
