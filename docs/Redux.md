@@ -113,3 +113,28 @@ This is done using the ```combineReducers``` method from *Redux*.
 ```
 
 The combineReducers method takes an object containing various reducers as key value pairs and returns a single reducer.
+
+### Accessing State from Components
+
+To access state from components,
+
+```javascript
+  import { connect } from 'react-redux'
+
+  function Component(props) {
+    ...
+  }
+
+  const mapStateToProps = (state) => {
+    return {
+      prop_1: state.prop_1,
+      prop_2: state.prop_2
+    }
+  }
+
+  export default connect(mapStateToProps)(Component)
+```
+
+When exporting the component, we do not export it directly, we call the connect method imported from *react-redux*.
+The **connect** method takes a function as paramter and returns a higher order component.
+The function taken as parameter, **mapStateToProps** takes the store as parameter and returns an object. The keys defined in this object are passed as props to the component defined. The values of these keys can be taken from the store. 
