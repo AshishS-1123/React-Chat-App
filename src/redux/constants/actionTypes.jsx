@@ -13,6 +13,8 @@ const actionTypes = {
 
   // this action will allow a signed in user to send a message to another user
   POST_MESSAGE: "POST_MESSAGE",
+  // this action fetches all the contacts of the user
+  FETCH_CONTACTS: "FETCH_CONTACTS"
 }
 
 export default actionTypes

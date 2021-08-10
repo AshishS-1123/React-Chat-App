@@ -52,7 +52,6 @@ export function signOutUser() {
     const firebase = getFirebase()
 
     firebase.auth().signOut().then(() => {
-      console.log("signed out")
       dispatch({
         type: actionTypes.SIGN_OUT,
         payload: null

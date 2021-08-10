@@ -11,7 +11,7 @@ function ChatList(props) {
 	const chat_list_items = props.user_contacts
 
 	const onChatClick = (e) => {
-
+		const chatroom_id = e.target.id.slice(4)
 	}
 
 	return (
@@ -19,9 +19,7 @@ function ChatList(props) {
 			<h1 className='ChatList__heading'>My Chats</h1>
 			<div className='ChatList__searchbar'>Search</div>
 			{props.contacts && props.contacts.map((item) => {
-				console.log("items")
-				console.log(item)
-
+				
 				return (
 						<Card key={item.chatroom_id}
 									id={"rec_"+item.chatroom_id}

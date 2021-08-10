@@ -4,8 +4,7 @@ import { connect, useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
 
 import Home from "./components/layout/Home"
-import ChatList from "./components/layout/ChatPage/ChatList"
-import ChatContainer from "./components/layout/ChatPage/ChatContainer"
+import ChatPage from "./components/layout/ChatPage"
 
 import "./App.css";
 import actionTypes from "./redux/constants/actionTypes"
@@ -25,32 +24,13 @@ function App(props) {
   // command for emulator
   // firebase emulators:start --import=./firebase-data --export-on-exit=./firebase-data
 
-  const user_id = props.uid
-  // fetch all the user prifile data and their contacts
-  useFirestoreConnect([
-    {collection: 'users', doc: user_id}
-  ])
-
-  // fetch the required data and wait for it to load
-	const user_profile = useSelector((state) => state.firestore.ordered.users)
-	if(isLoaded(user_profile)) {
-    user_contacts = user_profile[0]['contacts']
-	}
-
   if(props.isLoggedIn) {
     console.log("user already logged in")
     props.signIn(props.userName, "")
   }
 
   return (
-    props.isLoggedIn ? (
-      <div className='App__div'>
-        <ChatList
-            contacts={user_contacts}>
-        </ChatList>
-        <ChatContainer></ChatContainer>
-      </div>
-    ) : <Home />
+    props.isLoggedIn ? <ChatPage /> : <Home />
   )
 }
 

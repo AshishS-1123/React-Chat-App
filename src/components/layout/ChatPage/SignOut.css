@@ -1,8 +1,7 @@
 button.MuiButtonBase-root.SignOut__button {
   width: 100%;
   position: relative !important;
-  top: 33.3333vh !important;
-  transform: translateY(-50%) !important;
+  top: 55vh !important;
 
   border-bottom-left-radius: 39.99936px !important;
   border: none !important;
