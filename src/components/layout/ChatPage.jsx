@@ -8,28 +8,12 @@ import { fetchContacts } from "../../redux/actions/chatActions"
 
 function ChatPage(props) {
 
+  // dispatch action to fetch contacts from database and store it in the state
   props.fetchContacts()
-
-  let user_contacts = []
-  const user_id = useSelector((state) => state.firebase.auth.uid)
-
-  // fetch all the user profile data and their contacts
-  useFirestoreConnect([
-    {collection: 'users', doc: user_id}
-  ])
-
-  // fetch the required data and wait for it to load
-  const user_profile = useSelector((state) => state.firestore.ordered.users)
-
-  if(isLoaded(user_profile)) {
-    user_contacts = user_profile[0]['contacts']
-  }
 
   return (
     <div className='App__div'>
-      <ChatList
-          contacts={user_contacts}>
-      </ChatList>
+      <ChatList />
       <ChatContainer />
     </div>
   )
