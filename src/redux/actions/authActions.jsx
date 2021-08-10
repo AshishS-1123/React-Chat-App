@@ -12,6 +12,7 @@ export function signInUser(userName, password) {
 
     firebase.auth().signInWithEmailAndPassword(userName, password)
         .then(result => {
+            // when user sign's in successfully, dispatch the SIGN_IN action to update user's data in the state.
             dispatch({
               type: actionTypes.SIGN_IN,
               payload: { userName, password }

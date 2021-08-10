@@ -13,8 +13,6 @@ const actionTypes = {
 
   // this action will allow a signed in user to send a message to another user
   POST_MESSAGE: "POST_MESSAGE",
-  // this action will allow fetching all data related to chats of the current user
-  FETCH_GROUP: "FETCH_GROUP"
 }
 
 export default actionTypes
