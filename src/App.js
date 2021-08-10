@@ -1,7 +1,6 @@
-import { useState } from "react"
+import React from "react"
 import firebase from "firebase/app"
-import { connect, useSelector } from 'react-redux'
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
+import { connect } from 'react-redux'
 
 import Home from "./components/layout/Home"
 import ChatPage from "./components/layout/ChatPage"
@@ -10,7 +9,6 @@ import "./App.css";
 import actionTypes from "./redux/constants/actionTypes"
 
 function App(props) {
-  let user_contacts = []
 
   try {
       var auth = firebase.auth()

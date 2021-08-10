@@ -1,14 +1,10 @@
 import React from "react"
 import { Card } from "@material-ui/core"
-import { useSelector } from "react-redux"
 
 import "./ChatList.css"
 import SignOut from "./SignOut"
 
 function ChatList(props) {
-	const chats = useSelector((state) => state.chat)
-
-	const chat_list_items = props.user_contacts
 
 	const onChatClick = (e) => {
 		const chatroom_id = e.target.id.slice(4)
@@ -19,7 +15,7 @@ function ChatList(props) {
 			<h1 className='ChatList__heading'>My Chats</h1>
 			<div className='ChatList__searchbar'>Search</div>
 			{props.contacts && props.contacts.map((item) => {
-				
+
 				return (
 						<Card key={item.chatroom_id}
 									id={"rec_"+item.chatroom_id}
