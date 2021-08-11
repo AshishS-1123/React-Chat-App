@@ -46,15 +46,19 @@ export function fetchChats(chat_ids) {
         .then(response => {
           const data = response.data()
           messages.push(data['messages'])
+
+          // if we are currently processing the last chatroom id,
+          // then dispatch the FETCH_MESSAGES action to save thses values in store
+          if(messages.length === chat_ids.length) {
+            // dispatch the FETCH_MESSAGES action to store all the messages in store
+            dispatch({
+              type: actionTypes.FETCH_MESSAGES,
+              payload: messages
+            })
+          }
         }).catch(error => {
           console.log(error.message)
         })
-    })
-
-    // dispatch the FETCH_MESSAGES action to store all the messages in store
-    dispatch({
-      type: actionTypes.FETCH_MESSAGES,
-      payload: messages
     })
   }
 }
