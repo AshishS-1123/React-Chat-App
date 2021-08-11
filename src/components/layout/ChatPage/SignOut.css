@@ -1,7 +1,8 @@
 button.MuiButtonBase-root.SignOut__button {
-  width: 100%;
-  position: relative !important;
-  top: 55vh !important;
+
+  min-width: 364.8px;
+  position: absolute;
+  bottom: 10px;
 
   border-bottom-left-radius: 39.99936px !important;
   border: none !important;
@@ -9,6 +10,7 @@ button.MuiButtonBase-root.SignOut__button {
 
   background: #2d2620;
   color: white !important;
+
 
   font-family: "Semilight";
   font-size: 26px;
