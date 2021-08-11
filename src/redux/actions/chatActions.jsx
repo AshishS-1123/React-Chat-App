@@ -18,6 +18,14 @@ export function fetchContacts() {
           type: actionTypes.FETCH_CONTACTS,
           payload: user_profile_data
         })
+
+        const chat_ids = []
+        user_profile_data.contacts.forEach((item, idx) => {
+          chat_ids.push(item.chatroom_id)
+        })
+
+        dispatch(fetchChats(chat_ids))
+
     }).catch((error) => {
       console.log(error.message)
     })
@@ -43,7 +51,7 @@ export function fetchChats(chat_ids) {
         })
     })
 
-    // dispatch the FETCH_MESSAGES action to store all the messages in store 
+    // dispatch the FETCH_MESSAGES action to store all the messages in store
     dispatch({
       type: actionTypes.FETCH_MESSAGES,
       payload: messages

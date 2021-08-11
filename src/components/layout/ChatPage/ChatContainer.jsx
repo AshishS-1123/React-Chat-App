@@ -16,19 +16,6 @@ function ChatContainer(props) {
 	// state to store all sent and recieved messages
   const [messages, setMessages] = useState(chats.messages)
 
-  // get the list of all contacts this user can chat with
-  const recipients = useSelector(state => state.chat.recipients)
-  const chat_ids = []
-
-  if(isLoaded(recipients)) {
-    // as soon as the data loads, parse the id of all chat room's and fetch their chats
-    recipients.forEach((item, idx) => {
-      chat_ids.push(item.chatroom_id)
-    });
-
-    props.fetchChats(chat_ids)
-  }
-
   return (
       <div className="ChatContainer__div">
           <SenderHeader />
@@ -39,10 +26,4 @@ function ChatContainer(props) {
 
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchChats: (chat_ids) => dispatch(fetchChats(chat_ids))
-  }
-}
-
-export default connect(null, mapDispatchToProps)(ChatContainer)
+export default ChatContainer
