@@ -24,6 +24,33 @@ export function fetchContacts() {
   }
 }
 
+export function fetchChats(chat_ids) {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firestore = getFirestore()
+
+    const messages = []
+
+    // fetch messages for each of the given chat rooms and store it in an array
+    chat_ids.forEach((chat_id, idx) => {
+      firestore.collection("chats")
+        .doc(chat_id)
+        .get()
+        .then(response => {
+          const data = response.data()
+          messages.push(data['messages'])
+        }).catch(error => {
+          console.log(error.message)
+        })
+    })
+
+    // dispatch the FETCH_MESSAGES action to store all the messages in store 
+    dispatch({
+      type: actionTypes.FETCH_MESSAGES,
+      payload: messages
+    })
+  }
+}
+
 export function postMessage(reciever, message) {
 
   return (dispatch, getState) => {

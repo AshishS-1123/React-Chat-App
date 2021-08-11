@@ -13,6 +13,10 @@ function chatReducer(state=initState, action) {
                   recipients: action.payload.contacts,
                   active_chat_recipient: action.payload.contacts[0]}
       break
+    case actionTypes.FETCH_MESSAGES:
+      state = {...state,
+                  messages: action.payload}
+      break
     case actionTypes.POST_MESSAGE:
       break
     case actionTypes.ADD_RECIPIENT:
