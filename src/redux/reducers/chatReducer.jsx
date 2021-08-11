@@ -11,7 +11,7 @@ function chatReducer(state=initState, action) {
     case actionTypes.FETCH_CONTACTS:
       state = {...state,
                   recipients: action.payload.contacts,
-                  active_chat_recipient: action.payload.contacts[0]}
+                  active_chat_recipient: {...action.payload.contacts[0], index: 0}}
       break
     case actionTypes.FETCH_MESSAGES:
       state = {...state,
