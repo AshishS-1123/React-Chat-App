@@ -20,6 +20,8 @@ function authReducer(state=initState, action) {
     case actionType.ERROR_SIGN_IN:
       state = {...state, authError: "LOGIN FAILED"}
       break
+    case actionType.SIGN_UP:
+      state = {...state, ...action.payload}
     case actionType.SIGN_OUT:
       state = {...state, userName: "", password: "", authError: null}
       break

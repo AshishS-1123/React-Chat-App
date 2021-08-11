@@ -9,7 +9,7 @@ function chatReducer(state=initState, action) {
   switch(action.type) {
     case actionTypes.FETCH_CONTACTS:
       state = {...state,
-                  recipients: action.payload['contacts']}
+                  recipients: action.payload.contacts}
       break
     case actionTypes.POST_MESSAGE:
       break

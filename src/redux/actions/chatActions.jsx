@@ -18,6 +18,8 @@ export function fetchContacts() {
           type: actionTypes.FETCH_CONTACTS,
           payload: user_profile_data
         })
+    }).catch((error) => {
+      console.log(error.message)
     })
   }
 }
