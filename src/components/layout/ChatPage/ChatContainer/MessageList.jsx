@@ -1,25 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, connect } from 'react-redux'
 import { isLoaded } from 'react-redux-firebase'
 
 import "./MessageList.css"
 
-function MessageList() {
-
-  const active = useSelector(state => state.chat.active_chat_recipient.index)
-  const message_list = useSelector(state => state.chat.messages)
-	const user_id = useSelector(state => state.firebase.auth.uid)
-
-	let messages = []
-
-  if(isLoaded(active) && isLoaded(message_list)) {
-    messages = message_list[active]
-  }
-
+function MessageList({user_id, active, message_list}) {
 
 	return(
 		<div id='MessageList__container'>
-			{messages && messages.map((message, id) => {
+			{message_list && message_list[active] && message_list[active].map((message, id) => {
 				const classes = (message.sent_by === user_id) ? "MessageList__card MessageList__card_sent" : "MessageList__card"
 				return <div className={classes} key = {id}>{message.text}</div>
 			})}
@@ -27,4 +16,12 @@ function MessageList() {
 		);
 }
 
-export default MessageList;
+const mapStateToProps = (state) => {
+  return {
+    user_id: state.firebase.auth.uid,
+    active: state.chat.active_chat_recipient.index,
+    message_list: state.chat.messages
+  }
+}
+
+export default connect(mapStateToProps)(MessageList)
