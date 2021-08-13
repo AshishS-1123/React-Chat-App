@@ -41,7 +41,7 @@ function InputForm (props) {
 					disabled={!text}
 			  	onClick={onFormSubmit}
 			  >
-					<img src={SendIcon} alt='send button' id='InputForm__sendicon'/>
+					<img src={SendIcon} alt='send message' id='InputForm__sendicon'/>
 			  </IconButton>
 		  </FormControl>
 		</form>

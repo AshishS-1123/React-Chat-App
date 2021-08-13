@@ -36,6 +36,8 @@
 	box-sizing: border-box;
 	margin: 17px auto 54px auto;
 	padding: 6px 25px;
+
+	cursor: not-allowed;
 }
 
 .ChatList__card {
@@ -50,6 +52,8 @@
 	background: #2d2620 !important;
 	color: white !important;
 	box-shadow: none !important;
+
+	cursor: pointer;
 }
 
 .ChatList__pic {
@@ -59,6 +63,8 @@
 	background: #f2af4a;
 
 	border-radius: 50%;
+
+	cursor: pointer;
 }
 
 .ChatList__name {
@@ -66,6 +72,8 @@
 
 	font-family: "Semilight";
 	font-size: 21px;
+
+	cursor: pointer;
 }
 
 @media only screen and (max-width : 1175px) {
@@ -73,5 +81,7 @@
 		position: fixed;
 		left: 0px;
 		transform-origin: left;
+
+		box-shadow: 5px 2px 20px 0px black;
 	}
 }

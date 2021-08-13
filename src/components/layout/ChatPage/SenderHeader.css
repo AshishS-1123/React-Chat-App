@@ -20,6 +20,8 @@
   background: #1a1a1a;
   border: none;
   box-shadow: none;
+
+  cursor: pointer;
 }
 
 .SenderHeader__hamburger_icon {
@@ -30,6 +32,8 @@
 
   display: block;
   margin-top: 8px;
+
+  cursor: pointer;
 }
 
 .icon_1 {
