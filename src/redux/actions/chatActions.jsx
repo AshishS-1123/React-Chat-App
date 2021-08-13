@@ -77,13 +77,15 @@ export function postMessage(message) {
 
     firestore.collection('chats').doc(active_chat_id).update({
       messages: firebase.firestore.FieldValue.arrayUnion(message_object)
-    })
+    }).then(() => {
+      firestore.collection('chats').doc(active_chat_id).get().then(response => {
+        const messages = response.data()
 
-    dispatch({
-      type: actionTypes.POST_MESSAGE,
-      payload: {
-        message
-      }
+        dispatch({
+          type: actionTypes.POST_MESSAGE,
+          payload: messages
+        })
+      })
     })
   }
 }
