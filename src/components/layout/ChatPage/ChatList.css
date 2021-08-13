@@ -3,6 +3,8 @@
 	min-height: 94.4444vh;
 	overflow: visible !important;
 
+	transform-origin: right;
+	transition-duration: 0.1s;
 
 	float: left;
 	background: #2d2620;
@@ -68,6 +70,8 @@
 
 @media only screen and (max-width : 1175px) {
 	.ChatList__div {
-		display: none;
+		position: fixed;
+		left: 0px;
+		transform-origin: left;
 	}
 }

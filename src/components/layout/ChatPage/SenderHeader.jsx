@@ -1,30 +1,20 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { useSelector } from 'react-redux'
 
 import "./SenderHeader.css"
 
 function SenderHeader() {
+  const [toggleSidebar, setToggleSidebar] = useState(true)
 
   const onButtonClick = () => {
-    console.log("Clicked");
-    const icon_items = document.querySelectorAll('.SenderHeader__hamburger > span')
-
-    icon_items.forEach((item, idx) => {
-      const class_name = `icon_${idx + 1}`
-      item.classList.toggle(class_name)
-    })
-
+    setToggleSidebar(toggleSidebar => !toggleSidebar)
   }
 
   const onWindowResize = () => {
     if(window.innerWidth >= 1175) {
-      document.querySelectorAll('.SenderHeader__hamburger > span').forEach((item, idx) => {
-        item.classList.add(`icon_${idx+1}`)
-      })
+      setToggleSidebar(true)
     } else {
-      document.querySelectorAll('.SenderHeader__hamburger > span').forEach((item, idx) => {
-        item.classList.remove(`icon_${idx+1}`)
-      })
+      setToggleSidebar(false)
     }
   }
 
@@ -44,6 +34,32 @@ function SenderHeader() {
       window.removeEventListener('resize', onWindowResize)
     }
   }, [])
+
+  useEffect(() => {
+    const icon_items = document.querySelectorAll('.SenderHeader__hamburger > span')
+    const chatlist = document.querySelector('.ChatList__div')
+
+    if(toggleSidebar) {
+      icon_items.forEach((item, idx) => {
+        const class_name = `icon_${idx + 1}`
+        item.classList.add(class_name)
+      })
+
+      chatlist.style.transform = "scaleX(1)"
+      if(window.innerWidth  < 1175) {
+        document.querySelector('#InputForm__form').style.opacity = 0
+      }
+
+    } else {
+      icon_items.forEach((item, idx) => {
+        const class_name = `icon_${idx + 1}`
+        item.classList.remove(class_name)
+      })
+
+      chatlist.style.transform = "scaleX(0)"
+      document.querySelector('#InputForm__form').style.opacity = 1
+    }
+  }, [toggleSidebar])
 
   const user_info = useSelector(state => state.chat.active_chat_recipient)
 
