@@ -63,14 +63,25 @@ export function fetchChats(chat_ids) {
   }
 }
 
-export function postMessage(reciever, message) {
+export function postMessage(message) {
 
-  return (dispatch, getState) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+
+    const firestore = getFirestore()
+    const firebase = getFirebase()
+    const state = getState()
+
+    const active_chat_id = state.chat.active_chat_recipient.chatroom_id
+    const user_id = state.firebase.auth.uid;
+    const message_object = {sent_by: user_id, text: message}
+
+    firestore.collection('chats').doc(active_chat_id).update({
+      messages: firebase.firestore.FieldValue.arrayUnion(message_object)
+    })
 
     dispatch({
       type: actionTypes.POST_MESSAGE,
       payload: {
-        reciever,
         message
       }
     })
