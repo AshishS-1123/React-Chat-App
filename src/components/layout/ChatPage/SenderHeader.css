@@ -10,18 +10,42 @@
 }
 
 .SenderHeader__hamburger {
-  height: 100%;
-  padding-top: 10px;
+  width: 3rem;
+  height: 3rem;
+
+  align-self: center;
+  margin: 0px;
+  margin-left: 1rem;
+
+  background: #1a1a1a;
+  border: none;
+  box-shadow: none;
 }
 
-.SenderHeader__hamburgerbar {
-  height: 6px;
-  width: 70px;
-
-  margin-top: 20px;
-  margin-left: 30px;
+.SenderHeader__hamburger_icon {
+  width: 50px;
+  height: 5px;
 
   background: white;
+
+  display: block;
+  margin-top: 8px;
+}
+
+.icon_1 {
+  transform-origin: center;
+  transform: rotateZ(315deg);
+  margin-top: -5px;
+}
+
+.icon_2 {
+  transform-origin: center;
+  transform: rotateZ(45deg);
+  margin-top: -5px;
+}
+
+.icon_3 {
+  display: none !important;
 }
 
 .SenderHeader__senderinfo {
