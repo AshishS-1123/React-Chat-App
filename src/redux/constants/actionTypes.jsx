@@ -16,7 +16,9 @@ const actionTypes = {
   // this action fetches all the contacts of the user
   FETCH_CONTACTS: "FETCH_CONTACTS",
   // this action fetches all the messages from the chats the user is participating in
-  FETCH_MESSAGES: "FETCH_MESSAGES"
+  FETCH_MESSAGES: "FETCH_MESSAGES",
+  // this action sets the id of chatroom the user is corrently chatting with
+  SET_ACTIVE_CHAT: "SET_ACTIVE_CHAT"
 }
 
 export default actionTypes

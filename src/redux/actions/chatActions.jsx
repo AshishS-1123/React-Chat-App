@@ -89,3 +89,10 @@ export function postMessage(message) {
     })
   }
 }
+
+export function setActiveChat(chat_id) {
+  return {
+    type: actionTypes.SET_ACTIVE_CHAT,
+    payload: chat_id
+  }
+}
