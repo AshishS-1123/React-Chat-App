@@ -48,6 +48,7 @@ function SenderHeader() {
       chatlist.style.transform = "scaleX(1)"
       if(window.innerWidth  < 1175) {
         document.querySelector('#InputForm__form').style.opacity = 0
+        document.querySelector('.SenderHeader__hamburger').style.transform = "translate(280px, 4px) scale(0.8)"
       }
 
     } else {
@@ -58,6 +59,7 @@ function SenderHeader() {
 
       chatlist.style.transform = "scaleX(0)"
       document.querySelector('#InputForm__form').style.opacity = 1
+      document.querySelector('.SenderHeader__hamburger').style.transform = "translate(0px, 0px)"
     }
   }, [toggleSidebar])
 
