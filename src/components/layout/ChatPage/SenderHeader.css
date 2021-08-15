@@ -1,5 +1,5 @@
 .SenderHeader__container {
-  height: 77.92px;
+  height: 8.3148vh;
   min-width: 795.983px;
 
   background: #1a1a1a;
@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  box-shadow: 0px 0px 0px 0px black;
 }
 
 .SenderHeader__hamburger {
@@ -16,6 +18,9 @@
   align-self: center;
   margin: 0px;
   margin-left: 1rem;
+
+  position: relative;
+  top: 10px;
 
   background: rgba(28, 28, 28, 0);
   border: none;
