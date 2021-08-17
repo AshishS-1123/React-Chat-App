@@ -5,7 +5,7 @@ import { isLoaded } from 'react-redux-firebase'
 
 import InputForm from "./ChatContainer/InputForm"
 import MessageList from "./ChatContainer/MessageList"
-import SenderHeader from "./SenderHeader"
+import SenderHeader from "./ChatContainer/SenderHeader"
 import { fetchChats } from "../../../redux/actions/chatActions"
 
 import "./ChatContainer.css"
