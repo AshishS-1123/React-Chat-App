@@ -15,7 +15,9 @@ function SignUp(props) {
   const onFormSubmit = async (e) => {
     e.preventDefault()
 
-    props.signUpUser(info.name, info.email, info.password)
+    //props.signUpUser(info.name, info.email, info.password)
+    const alert_msg = "\nThis is a demo project so creating new accounts is not allowed.\nYou can always sign in using the following credentials-\n\nUsername: ross_geller@friends.com\nPassword: Test@1234\n\nUsername: monica_geller@friends.com\nPassword: Test@1234\n\nUsername: chandler_bing@friends.com\nPassword: Test@1234\n\nUsername: joey_tribianni@friends.com\nPassword: Test@1234\n\nUsername: phoebe_buffay@friends.com\nPassword: Test@1234\n\nUsername: rachel_green@friends.com\nPassword: Test@1234\n\n"
+    window.alert(alert_msg)
   }
 
   return(
