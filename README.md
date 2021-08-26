@@ -9,20 +9,12 @@ The mockup for the application has been created using Adobe XD with some borrowe
 This is what the final product is expected to look like
 
 <div>
-  <style>
-    div {
-    }
-    img {
-      width: 49%;
-      margin-bottom: 0.5%;
-    }
-  </style>
 
-  <img src='/design/Home Page.png'>
-  <img src='/design/Log In.png'>
-  <img src='/design/Sign Up.png'>
-  <img src='/design/Chat List Expanded.png'>
-  <img src='/design/Chat List Contracted.png'>
+  <img src='/design/Home Page.png' width="49%" style="margin-bottom=0.5%">
+  <img src='/design/Log In.png' width="49%" style="margin-bottom=0.5%">
+  <img src='/design/Sign Up.png' width="49%" style="margin-bottom=0.5%">
+  <img src='/design/Chat List Expanded.png' width="49%" style="margin-bottom=0.5%">
+  <img src='/design/Chat List Contracted.png' width="49%" style="margin-bottom=0.5%">
 </div>
 
 ## Code Architecture
