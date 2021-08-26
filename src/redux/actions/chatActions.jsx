@@ -68,7 +68,6 @@ export function postMessage(message) {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
 
     const firestore = getFirestore()
-    const firebase = getFirebase()
     const state = getState()
 
     const active_chat_id = state.chat.active_chat_recipient.chatroom_id

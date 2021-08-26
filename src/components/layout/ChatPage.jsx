@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSelector, connect } from 'react-redux'
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
+import { connect } from 'react-redux'
 
 import ChatList from "./ChatPage/ChatList"
 import ChatContainer from "./ChatPage/ChatContainer"

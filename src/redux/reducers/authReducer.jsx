@@ -22,6 +22,7 @@ function authReducer(state=initState, action) {
       break
     case actionType.SIGN_UP:
       state = {...state, ...action.payload}
+      break
     case actionType.SIGN_OUT:
       state = {...state, userName: "", password: "", authError: null}
       break

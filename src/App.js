@@ -11,8 +11,10 @@ import actionTypes from "./redux/constants/actionTypes"
 function App(props) {
 
   try {
+      // eslint-disable-next-line
       var auth = firebase.auth()
       //auth.useEmulator("http://localhost:9099")
+      // eslint-disable-next-line
       var db = firebase.firestore()
       //db.useEmulator("localhost", 8080)
   } catch(error) {

@@ -14,8 +14,6 @@ function InputForm (props) {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
 
-		let new_message = {id: 0, type: "sent", text: text}
-		//setMessages([new_message, ...messages]);
 		props.postMessage(text)
 		setText('');
 	}

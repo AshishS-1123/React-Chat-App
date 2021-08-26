@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSelector, connect } from 'react-redux'
-import { isLoaded } from 'react-redux-firebase'
+import { connect } from 'react-redux'
 
 import "./MessageList.css"
 
