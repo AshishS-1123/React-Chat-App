@@ -75,17 +75,20 @@ export function postMessage(message) {
     const user_id = state.firebase.auth.uid;
     const message_object = {sent_by: user_id, text: message}
 
-    firestore.collection('chats').doc(active_chat_id).update({
-      messages: firebase.firestore.FieldValue.arrayUnion(message_object)
-    }).then(() => {
-      firestore.collection('chats').doc(active_chat_id).get().then(response => {
-        const messages = response.data()
+    //firestore.collection('chats').doc(active_chat_id).update({
+    firestore.collection('chats').doc(active_chat_id).get().then(response => {
+        const messages = response.data();
+        const new_messages = [...messages.messages, message_object]
 
-        dispatch({
-          type: actionTypes.POST_MESSAGE,
-          payload: messages
+        firestore.collection('chats').doc(active_chat_id).set({messages: new_messages}).then(() => {
+            const element = document.getElementById("MessageList__container")
+            element.scrollTop = element.scrollHeight;
+
+            dispatch({
+              type: actionTypes.POST_MESSAGE,
+              payload: {messages: new_messages}
+            })
         })
-      })
     })
   }
 }
