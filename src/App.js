@@ -12,9 +12,9 @@ function App(props) {
 
   try {
       var auth = firebase.auth()
-      auth.useEmulator("http://localhost:9099")
+      //auth.useEmulator("http://localhost:9099")
       var db = firebase.firestore()
-      db.useEmulator("localhost", 8080)
+      //db.useEmulator("localhost", 8080)
   } catch(error) {
       console.log(error.message)
   }
