@@ -6,7 +6,8 @@
 }
 
 .RightPane__heading {
-  font-family: "Semibold";
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 37px;
   color: #151515;
 

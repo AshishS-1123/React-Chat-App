@@ -28,8 +28,9 @@
 }
 
 #InputForm__input {
-	font-family: "Semilight";
-	font-size: 22px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300 !important;
+	font-size: 20px;
 	padding-left: 40px;
 	color: white !important;
 }

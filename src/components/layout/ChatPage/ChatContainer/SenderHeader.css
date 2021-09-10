@@ -58,7 +58,8 @@
 }
 
 .SenderHeader__senderinfo {
-  font-family: "Semilight";
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300 !important;
   color: rgba(255, 255, 255, 0.82);
   font-size: 25px;
 
@@ -66,6 +67,7 @@
 }
 
 .SenderHeader__sendername {
+    font-weight: 600 !important;
   margin: 0px;
   font-size: 32px;
 }

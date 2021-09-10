@@ -15,8 +15,8 @@
 }
 
 .MessageList__card {
-	font-family: "Regular";
-	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
 	background: #f2af4a !important;
 
 	padding: 8px 30px 13px 37px;

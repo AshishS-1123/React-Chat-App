@@ -6,8 +6,8 @@ import { getFirebase } from 'react-redux-firebase'
 import reducers from "./reducers/root"
 
 const composedEnhancer = compose(
-                          applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-                          window.__REDUX_DEVTOOLS_EXTENSION__())
+                          applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })))
+                         // window.__REDUX_DEVTOOLS_EXTENSION__())
 
 const store = createStore(reducers, {}, composedEnhancer)
 

@@ -13,7 +13,8 @@
 }
 
 .ChatList__heading {
-	font-family: "Semibold";
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 	color: white;
 	font-size: 28px !important;
 
@@ -29,8 +30,9 @@
 
 	border-radius: 19.48px;
 
-	font-family: "Light";
-	font-size: 15.36px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 16.36px;
 	color: rgba(255, 255, 255, 0.94);
 
 	box-sizing: border-box;
@@ -70,7 +72,7 @@
 .ChatList__name {
 	margin-left: 10px;
 
-	font-family: "Semilight";
+	font-family: 'Open Sans', sans-serif;
 	font-size: 21px;
 
 	cursor: pointer;

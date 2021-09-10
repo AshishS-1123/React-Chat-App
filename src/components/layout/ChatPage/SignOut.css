@@ -12,7 +12,7 @@ button.MuiButtonBase-root.SignOut__button {
   color: white !important;
 
 
-  font-family: "Semilight";
+  font-family: 'Open Sans', sans-serif;
   font-size: 26px;
 }
 button.MuiButtonBase-root.SignOut__button:hover {
